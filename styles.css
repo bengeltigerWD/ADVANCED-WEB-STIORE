@@ -16,7 +16,7 @@ body {
 
 header {
     background-color: #00ADB5;
-    padding: 10px; /* Reduced padding */
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,7 +29,7 @@ header .logo {
 }
 
 .logo-img {
-    width: 60px; /* Smaller logo size */
+    width: 80px; /* Smaller logo */
     height: auto;
 }
 
@@ -39,7 +39,7 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 15px; /* Reduced margin for mobile */
+    margin-left: 20px;
 }
 
 nav ul li a {
@@ -51,7 +51,7 @@ nav ul li a {
 .banner {
     background: linear-gradient(to right, #00adb5, #393e46);
     color: white;
-    height: 50vh; /* Adjusted height for better mobile view */
+    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,18 +60,18 @@ nav ul li a {
 }
 
 .banner h2 {
-    font-size: 2.5rem; /* Adjusted font size */
+    font-size: 3rem;
     margin-bottom: 10px;
 }
 
 .banner p {
-    font-size: 1rem; /* Adjusted font size */
+    font-size: 1.2rem;
     margin-bottom: 20px;
 }
 
 .banner .btn {
     background-color: #393e46;
-    padding: 10px 20px; /* Adjusted padding */
+    padding: 12px 25px;
     color: #fff;
     text-decoration: none;
     border-radius: 30px;
@@ -84,23 +84,24 @@ nav ul li a {
 
 /* Search Container */
 .search-container {
-    margin-top: 15px; /* Space between Shop Now and Search */
+    margin-top: 20px; /* Space between Shop Now and Search */
 }
 
 .search-input {
-    padding: 8px; /* Adjusted padding */
+    padding: 10px;
     border: none;
-    border-radius: 5px 0 0 5px;
-    width: 200px; /* Adjust the width as needed */
+    border-radius: 20px;
+    width: 200px;
 }
 
 .search-button {
-    padding: 8px 12px; /* Adjusted padding */
     background-color: #00adb5;
-    color: white;
     border: none;
-    border-radius: 0 5px 5px 0;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
     cursor: pointer;
+    margin-left: 10px;
     transition: background-color 0.3s ease;
 }
 
@@ -108,89 +109,69 @@ nav ul li a {
     background-color: #393e46;
 }
 
-.categories,
-.products {
-    padding: 1rem; /* Adjusted padding for better mobile view */
+.categories {
+    padding: 20px;
     text-align: center;
-    background-color: #fff;
 }
 
-.categories h2,
-.products h2 {
-    font-size: 1.8rem; /* Adjusted font size */
-    margin-bottom: 1rem;
-    color: #333;
-}
-
-.category-links,
-.product-grid {
+.category-links {
     display: flex;
-    justify-content: center; /* Center align categories and products */
-    flex-wrap: wrap; /* Wrap if there's not enough space */
+    justify-content: center;
+    gap: 30px;
 }
 
-.category-links a,
-.product-card {
-    font-size: 1rem; /* Adjusted font size */
-    color: #00adb5;
+.category-links a {
+    color: #00ADB5;
     text-decoration: none;
-    margin: 10px; /* Adjusted margin for mobile */
-    padding: 10px 15px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold;
 }
 
-.category-links a:hover,
-.product-card:hover {
-    background-color: #f3f4f6;
-    color: #393e46;
-    border-radius: 5px;
+.category-links a:hover {
+    text-decoration: underline;
+}
+
+.products {
+    padding: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Set to 5 columns */
+    gap: 2rem; /* Space between product cards */
 }
 
 .product-card {
-    background-color: #fff;
-    border-radius: 15px;
-    padding: 1rem; /* Adjusted padding */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product-card img {
-    width: 100%;
-    height: 150px; /* Adjusted height */
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 0.5rem;
+    max-width: 100%; /* Make images responsive */
+    border-radius: 4px;
 }
 
 .product-card h3 {
-    font-size: 1.2rem; /* Adjusted font size */
-    margin-bottom: 5px;
+    margin: 10px 0;
 }
 
 .product-card p {
-    font-size: 1rem; /* Adjusted font size */
-    margin-bottom: 5px;
-    color: #00adb5;
+    margin: 5px 0;
 }
 
-.product-card .description {
-    font-size: 0.8rem; /* Adjusted font size */
-    color: #666;
-    margin-bottom: 5px;
-}
-
-.product-card .btn {
+.btn {
     background-color: #00adb5;
-    padding: 8px 15px; /* Adjusted padding */
+    padding: 10px 15px;
+    border: none;
     color: white;
-    border-radius: 30px;
+    border-radius: 20px;
     text-decoration: none;
-    font-weight: 700; /* Font weight for button */
     transition: background-color 0.3s ease;
 }
 
-.product-card .btn:hover {
+.btn:hover {
     background-color: #393e46;
 }
 
@@ -198,7 +179,7 @@ footer {
     background-color: #00adb5;
     color: white;
     text-align: center;
-    padding: 1rem;
+    padding: 20px;
     position: relative;
     bottom: 0;
     width: 100%;
@@ -210,32 +191,6 @@ footer .social-media {
 
 footer .social-media a {
     color: white;
-    margin: 0 10px;
     text-decoration: none;
-}
-
-/* Media Queries for Mobile Responsiveness */
-@media (max-width: 600px) {
-    header {
-        flex-direction: column; /* Stack logo and nav */
-        align-items: flex-start; /* Align to the left */
-    }
-    nav ul {
-        flex-direction: column; /* Stack nav items vertically */
-        margin-top: 10px; /* Space between logo and nav */
-    }
-    nav ul li {
-        margin-left: 0; /* Reset margin for mobile */
-        margin-bottom: 10px; /* Space between nav items */
-    }
-    .banner h2 {
-        font-size: 2rem; /* Smaller font size */
-    }
-    .banner p {
-        font-size: 0.9rem; /* Smaller font size */
-    }
-    .search-input,
-    .search-button {
-        width: 100%; /* Full width for search */
-    }
+    margin: 0 10px;
 }
