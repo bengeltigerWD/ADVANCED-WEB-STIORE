@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Times New Roman', Times, serif;
-    background: url('background.jpg') no-repeat center center fixed; /* Ensure the correct path */
+    background: url('space.jpg') no-repeat center center fixed; /* Ensure the correct path */
     background-size: cover; /* Cover the entire body */
     color: #fff; /* Set text color to white */
     padding: 20px;
