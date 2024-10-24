@@ -8,11 +8,9 @@
 body {
     font-family: 'Times New Roman', Times, serif; /* Set Times New Roman font */
     background: url('background.jpg') no-repeat center center fixed; /* Background image */
-    
     background-color: black; /* Set background color to black */
-    color: #fff; /* Set text color to white only for content areas */
+    color: #fff; /* Set text color to white for content areas */
     padding: 20px;
-  
 }
 
 /* Overlay for background image */
@@ -23,13 +21,18 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with opacity */
+    background-color: rgba(0, 0, 0, 0.3); /* Lighter overlay */
     z-index: 0; /* Behind all content */
 }
 
+/* Main content area with a different background color */
 .content {
     position: relative; /* Required to place content above the overlay */
     z-index: 1; /* On top of the overlay */
+    background-color: white; /* Lighter background for content */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Light shadow for depth */
 }
 
 /* Header styles */
