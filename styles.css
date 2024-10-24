@@ -43,7 +43,7 @@ nav a:hover {
 
 /* Banner styles */
 .banner {
-    background-image: url('banner-space.jpg'); /* Update with your space-themed banner image */
+    background-image: url('space.jpg'); /* Update with your space-themed banner image */
     background-size: cover;
     background-position: center;
     height: 400px;
