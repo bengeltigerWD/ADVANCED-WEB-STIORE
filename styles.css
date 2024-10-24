@@ -1,33 +1,29 @@
-/* Reset some default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-/* Body Styles */
 body {
+    margin: 0;
     font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
+    background: linear-gradient(to bottom, #000428, #004e92); /* Space gradient */
+    color: #fff;
 }
 
-/* Header Styles */
+/* Header styles */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
 }
 
-header .logo-img {
-    height: 50px; /* Set a fixed height for logo */
+.logo-img {
+    height: 50px;
 }
 
 nav ul {
-    list-style: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     display: flex;
 }
 
@@ -35,18 +31,27 @@ nav ul li {
     margin-left: 20px;
 }
 
-nav ul li a {
-    color: #fff;
+nav a {
+    color: #ffcc00; /* Gold color for links */
     text-decoration: none;
-    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-/* Banner Section */
+nav a:hover {
+    color: #ff5722; /* Orange color on hover */
+}
+
+/* Banner styles */
 .banner {
-    background: url('banner-image.jpg') no-repeat center center/cover; /* Add a background image for the banner */
-    color: white;
-    padding: 80px 20px;
+    background-image: url('banner-space.jpg'); /* Update with your space-themed banner image */
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    color: #ffcc00; /* Gold color for text */
 }
 
 .search-container {
@@ -55,34 +60,55 @@ nav ul li a {
 
 .search-input {
     padding: 10px;
-    width: 250px;
-    border: none;
+    font-size: 16px;
+    width: 300px;
     border-radius: 5px;
+    border: 1px solid #ffcc00;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent input */
+    color: #fff;
 }
 
 .search-button {
-    padding: 10px 15px;
-    background-color: #f76b30;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #ff5722; /* Bright button */
+    color: white;
     border: none;
-    color: #fff;
-    border-radius: 5px;
     cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-/* Categories Section */
+.search-button:hover {
+    background-color: #ffcc00; /* Change on hover */
+}
+
+/* Categories styles */
 .categories {
-    text-align: center;
     padding: 20px;
+    text-align: center;
+}
+
+.category-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
 }
 
 .category-links a {
-    margin: 0 10px;
+    margin: 0 15px;
     text-decoration: none;
-    color: #333;
+    color: #ffcc00; /* Gold color */
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-/* Products Section */
+.category-links a:hover {
+    color: #ff5722; /* Change on hover */
+}
+
+/* Products styles */
 .products {
     padding: 20px;
 }
@@ -90,67 +116,86 @@ nav ul li a {
 .product-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Space between cards */
+    justify-content: space-around;
 }
 
 .product-card {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
+    border-radius: 8px;
+    margin: 15px;
     padding: 15px;
-    flex: 0 1 calc(33.33% - 20px); /* 3 cards per row on desktop */
-    text-align: center;
-    transition: transform 0.3s;
-}
-
-.product-card:hover {
-    transform: scale(1.05); /* Scale effect on hover */
+    width: 300px;
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
+    position: relative;
+    backdrop-filter: blur(10px); /* Blur effect for depth */
 }
 
 .image-container {
-    width: 100%;
+    position: relative;
+    height: 200px;
     overflow: hidden;
 }
 
-.image-container img {
+.slider {
+    position: relative;
+    height: 100%;
+}
+
+.slide {
+    display: none;
     width: 100%;
-    height: auto;
-    border-radius: 10px; /* Match card corners */
+    height: 100%;
 }
 
-/* Button Styles */
-.btn {
-    background-color: #f76b30;
-    color: #fff;
-    padding: 10px 15px;
+.slide.active {
+    display: block;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.2);
     border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    display: inline-block;
+    font-size: 18px;
+    cursor: pointer;
+    color: #ffcc00;
 }
 
-/* Footer Section */
+button.prev:hover, button.next:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Footer styles */
 footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffcc00; /* Gold color */
     text-align: center;
     padding: 20px;
-    background-color: #333;
-    color: white;
+    position: relative;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .product-card {
-        flex: 0 1 calc(50% - 20px); /* 2 cards per row for tablets */
-    }
+footer .social-media a {
+    margin: 0 10px;
+    color: #ffcc00; /* Gold color */
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-@media (max-width: 480px) {
-    .product-card {
-        flex: 0 1 100%; /* 1 card per row for mobile */
-    }
+footer .social-media a:hover {
+    color: #ff5722; /* Change on hover */
+}
 
-    .search-input {
-        width: 100%; /* Full width for mobile */
-    }
+/* Star background effect */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('starfield.png') repeat; /* Star background image */
+    opacity: 0.5;
+    z-index: -1; /* Send to the back */
 }
