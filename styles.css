@@ -13,6 +13,10 @@ body {
     padding: 20px;
 }
 
+/* Other styles remain the same */
+
+}
+
 /* Main content area with a different background color */
 .content {
     position: relative; /* Required to place content above the overlay */
