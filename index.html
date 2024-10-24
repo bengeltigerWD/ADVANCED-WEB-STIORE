@@ -1,196 +1,3 @@
-/* Global Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --primary-color: #ffcc00;
-    --secondary-color: #000;
-    --bg-color: rgba(0, 0, 0, 0.8);
-}
-
-body {
-    font-family: 'Times New Roman', Times, serif;
-    background: url('space.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #fff;
-    padding: 20px;
-}
-
-/* Header Styles */
-header {
-    background: var(--bg-color);
-    padding: 15px;
-    text-align: center;
-}
-
-.container {
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center elements */
-}
-
-.logo h1 {
-    font-size: 2.5em;
-}
-
-nav ul {
-    list-style-type: none;
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: center; 
-    padding: 10px 0;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: var(--primary-color);
-}
-
-/* Search Bar Styles */
-.search-bar {
-    display: flex;
-    margin-top: 15px; 
-}
-
-.search-bar input {
-    padding: 10px;
-    border: none;
-    border-radius: 5px 0 0 5px;
-    outline: none;
-}
-
-.search-bar button {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 0 5px 5px 0;
-    background-color: var(--primary-color);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.search-bar button:hover {
-    background-color: #e6b800;
-}
-
-/* Section Styles */
-.offers, .product-grid {
-    margin: 20px 0;
-}
-
-.offers h2, .product-grid h2 {
-    text-align: center;
-    color: var(--primary-color);
-}
-
-.offer-images {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-}
-
-.offer-images img {
-    max-width: 100%;
-    height: auto;
-    margin: 0 10px;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-.offer-images img.active {
-    opacity: 1;
-}
-
-/* Product Grid Styles */
-.product-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.product-item {
-    background: #fff;
-    color: var(--secondary-color);
-    margin: 10px;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: calc(25% - 20px); /* Four items per row */
-}
-
-.product-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-}
-
-.product-item img {
-    max-width: 100%;
-    height: auto; /* Ensure images maintain aspect ratio */
-    border-radius: 5px;
-}
-
-.product-item h3 {
-    margin: 10px 0;
-}
-
-.price {
-    font-size: 1.2em;
-    color: var(--primary-color);
-}
-
-/* Button Styles */
-.details-btn {
-    display: inline-block;
-    background: var(--primary-color);
-    color: var(--secondary-color);
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.details-btn:hover {
-    background: #e6b800;
-}
-
-/* Footer Styles */
-footer {
-    text-align: center;
-    margin-top: 20px;
-    padding: 10px;
-    background: var(--bg-color);
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .product-item {
-        width: calc(50% - 20px); /* Two items per row on mobile */
-    }
-
-    .search-bar {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .search-bar input, .search-bar button {
-        width: 100Here's the updated HTML and CSS code for your **Advanced Web Store**. The updates include improved structure and responsiveness while keeping the design modern and appealing. I've incorporated responsive styles to ensure it looks good on various devices.
-
-### Updated HTML (index.html)
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -232,29 +39,31 @@ footer {
 
     <section class="product-grid">
         <h2 class="highlight">Available Websites</h2>
-        <div class="product-item">
-            <img src="space.jpg" alt="Website 1">
-            <h3>Business Website 1</h3>
-            <p class="price">Price: $399</p>
-            <a href="product1.html" class="details-btn">Details</a>
-        </div>
-        <div class="product-item">
-            <img src="space.jpg" alt="Website 2">
-            <h3>E-commerce Website 2</h3>
-            <p class="price">Price: $599</p>
-            <a href="product2.html" class="details-btn">Details</a>
-        </div>
-        <div class="product-item">
-            <img src="space.jpg" alt="Website 3">
-            <h3>Portfolio Website 3</h3>
-            <p class="price">Price: $249</p>
-            <a href="product3.html" class="details-btn">Details</a>
-        </div>
-        <div class="product-item">
-            <img src="space.jpg" alt="Website 4">
-            <h3>Blog Website 4</h3>
-            <p class="price">Price: $199</p>
-            <a href="product4.html" class="details-btn">Details</a>
+        <div class="grid-container">
+            <div class="product-item">
+                <img src="space.jpg" alt="Website 1">
+                <h3>Business Website 1</h3>
+                <p class="price">Price: $399</p>
+                <a href="product1.html" class="details-btn">Details</a>
+            </div>
+            <div class="product-item">
+                <img src="space.jpg" alt="Website 2">
+                <h3>E-commerce Website 2</h3>
+                <p class="price">Price: $599</p>
+                <a href="product2.html" class="details-btn">Details</a>
+            </div>
+            <div class="product-item">
+                <img src="space.jpg" alt="Website 3">
+                <h3>Portfolio Website 3</h3>
+                <p class="price">Price: $249</p>
+                <a href="product3.html" class="details-btn">Details</a>
+            </div>
+            <div class="product-item">
+                <img src="space.jpg" alt="Website 4">
+                <h3>Blog Website 4</h3>
+                <p class="price">Price: $199</p>
+                <a href="product4.html" class="details-btn">Details</a>
+            </div>
         </div>
     </section>
 
