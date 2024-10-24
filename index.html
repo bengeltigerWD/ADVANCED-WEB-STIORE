@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,10 +14,6 @@
             <div class="logo">
                 <h1>Advanced Web Store</h1>
             </div>
-            <div class="search-bar">
-                <input type="text" id="searchQuery" placeholder="Search for products...">
-                <button id="searchBtn">Search</button>
-            </div>
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
@@ -24,10 +21,14 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Search websites...">
+                <button id="searchBtn">Search</button>
+            </div>
         </div>
     </header>
 
-   <!-- Offer Images Section -->
+    <!-- Offer Images Section -->
     <section class="offers">
         <h2>Special Offers</h2>
         <div class="offer-images" id="offerImages">
@@ -67,38 +68,18 @@
             <a href="product4.html" class="details-btn">Details</a>
         </div>
     </section>
+
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 Advanced Web Store. All Rights Reserved.</p>
     </footer>
 
+    <!-- JavaScript for Search Button -->
     <script>
-        // Image slider functionality
-        const images = document.querySelectorAll('#offerImages img');
-        let currentIndex = 0;
-
-        function showNextImage() {
-            images[currentIndex].classList.remove('active');
-            currentIndex = (currentIndex + 1) % images.length;
-            images[currentIndex].classList.add('active');
-        }
-
-        // Initial display
-        images[currentIndex].classList.add('active');
-
-        // Change image every 4 seconds
-        setInterval(showNextImage, 4000);
-
-        // Search button functionality
-        const searchBtn = document.getElementById('searchBtn');
-        const searchQuery = document.getElementById('searchQuery');
-
-        searchBtn.addEventListener('click', () => {
-            const query = searchQuery.value.trim();
-            if (query) {
-                // Implement search logic (Redirect to search results page or filter products)
-                alert('Search initiated for: ' + query);
-                // Replace this alert with actual search functionality
+        document.getElementById('searchBtn').addEventListener('click', function() {
+            const searchTerm = document.getElementById('search').value;
+            if (searchTerm) {
+                alert('Searching for: ' + searchTerm);
             } else {
                 alert('Please enter a search term.');
             }
