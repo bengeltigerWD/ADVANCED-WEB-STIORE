@@ -9,8 +9,27 @@ body {
     font-family: 'Times New Roman', Times, serif; /* Set Times New Roman font */
     background: url('background.jpg') no-repeat center center fixed; /* Background image */
     background-size: cover; /* Ensure background covers full screen */
-    color: #333;
+    background-color: black; /* Set background color to black */
+    color: #fff; /* Change text color to white for better contrast */
     padding: 20px;
+    position: relative; /* Required for overlay */
+}
+
+/* Overlay for background image */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with opacity */
+    z-index: 0; /* Behind all content */
+}
+
+.content {
+    position: relative; /* Required to place content above the overlay */
+    z-index: 1; /* On top of the overlay */
 }
 
 /* Header styles */
@@ -162,23 +181,6 @@ nav ul li a:hover {
     .product-item p.price {
         font-size: 14px;
     }
-}
-
-
-.product-item .details-btn {
-    font-family: 'Times New Roman', Times, serif;
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #3f51b5;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.product-item .details-btn:hover {
-    background-color: #283593;
 }
 
 /* Footer styles */
