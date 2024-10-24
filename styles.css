@@ -8,11 +8,11 @@
 body {
     font-family: 'Times New Roman', Times, serif; /* Set Times New Roman font */
     background: url('background.jpg') no-repeat center center fixed; /* Background image */
-    background-size: cover; /* Ensure background covers full screen */
+    
     background-color: black; /* Set background color to black */
-    color: #fff; /* Change text color to white for better contrast */
+    color: #fff; /* Set text color to white only for content areas */
     padding: 20px;
-    position: relative; /* Required for overlay */
+  
 }
 
 /* Overlay for background image */
