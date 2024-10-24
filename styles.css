@@ -1,102 +1,156 @@
-/* Global Styles */
-body {
-    font-family: 'Arial', sans-serif; /* Clean and modern font */
-    background-color: #f4f4f4; /* Light background */
-    color: #333; /* Dark text color */
+/* Reset some default styles */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo-img {
+    height: 50px; /* Set a fixed height for logo */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Banner Section */
+.banner {
+    background: url('banner-image.jpg') no-repeat center center/cover; /* Add a background image for the banner */
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.search-container {
+    margin-top: 20px;
+}
+
+.search-input {
+    padding: 10px;
+    width: 250px;
+    border: none;
+    border-radius: 5px;
+}
+
+.search-button {
+    padding: 10px 15px;
+    background-color: #f76b30;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Categories Section */
+.categories {
+    text-align: center;
+    padding: 20px;
+}
+
+.category-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
 }
 
 /* Products Section */
 .products {
     padding: 20px;
-    background-color: #ffffff;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
 }
 
-/* Grid Layout for Product Cards */
 .product-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Default to 3 columns for PC */
-    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Space between cards */
 }
 
-/* Media Queries for Responsive Design */
-@media (max-width: 768px) {
-    .product-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
-    }
-}
-
-@media (max-width: 480px) {
-    .product-grid {
-        grid-template-columns: 1fr; /* 1 column for mobile phones */
-    }
-}
-
-/* Product Card */
 .product-card {
-    border: 1px solid #ddd; /* Light border */
-    border-radius: 10px; /* Rounded corners */
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
     padding: 15px;
+    flex: 0 1 calc(33.33% - 20px); /* 3 cards per row on desktop */
     text-align: center;
-    background-color: #ffffff;
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+    transition: transform 0.3s;
 }
 
-/* Hover effect for product card */
 .product-card:hover {
-    transform: translateY(-5px); /* Slight lift on hover */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+    transform: scale(1.05); /* Scale effect on hover */
 }
 
-/* Image Container */
 .image-container {
-    position: relative;
     width: 100%;
-    overflow: hidden;
-    border-radius: 10px; /* Rounded corners */
-}
-
-.slider {
-    position: relative;
-    width: 100%;
-    height: 200px; /* Set height for the images */
     overflow: hidden;
 }
 
-.slide {
-    position: absolute;
+.image-container img {
     width: 100%;
     height: auto;
-    animation: slide-animation 15s infinite; /* Adjust animation duration as needed */
+    border-radius: 10px; /* Match card corners */
 }
 
 /* Button Styles */
 .btn {
-    background-color: #00ADB5; /* Teal color */
-    color: white;
+    background-color: #f76b30;
+    color: #fff;
     padding: 10px 15px;
-    text-decoration: none;
+    border: none;
     border-radius: 5px;
+    text-decoration: none;
     display: inline-block;
-    margin-top: 10px;
-    transition: background-color 0.3s; /* Smooth transition */
 }
 
-.btn:hover {
-    background-color: #007a7e; /* Darker teal on hover */
+/* Footer Section */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
 }
 
-/* Typography */
-h2 {
-    font-size: 1.5em;
-    margin: 10px 0;
-    color: #00ADB5; /* Accent color */
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .product-card {
+        flex: 0 1 calc(50% - 20px); /* 2 cards per row for tablets */
+    }
 }
 
-p {
-    line-height: 1.5;
-    margin: 10px 0;
+@media (max-width: 480px) {
+    .product-card {
+        flex: 0 1 100%; /* 1 card per row for mobile */
+    }
+
+    .search-input {
+        width: 100%; /* Full width for mobile */
+    }
 }
