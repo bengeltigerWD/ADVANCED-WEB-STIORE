@@ -1,4 +1,4 @@
-/* General styles */
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,210 +6,178 @@
 }
 
 body {
-    font-family: 'Times New Roman', Times, serif; /* Set Times New Roman font */
-    background: url('background.jpg') no-repeat center center fixed; /* Custom background image */
-    background-size: cover; /* Cover the entire body */
-    color: #fff; /* Set text color to white for content areas */
-    padding: 20px;
-}
-
-/* Other styles remain the same */
-
-}
-
-/* Main content area with a different background color */
-.content {
-    position: relative; /* Required to place content above the overlay */
-    z-index: 1; /* On top of the overlay */
-    background-color: rgba(255, 255, 255, 0.8); /* Light background for content with transparency */
-    padding: 20px;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Light shadow for depth */
-}
-
-/* Header styles */
-header {
-    background-color: rgba(63, 81, 181, 0.8); /* Semi-transparent modern blue */
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
-}
-
-header .logo h1 {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 32px;
-    font-weight: 700;
+    background: url('background.jpg') no-repeat center center fixed; /* Ensure the correct path */
+    background-size: cover; /* Cover the entire body */
+    color: #fff; /* Set text color to white */
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    padding: 10px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 2em;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
+    list-style-type: none;
 }
 
 nav ul li {
-    margin: 0 20px;
+    display: inline;
+    margin: 0 15px;
 }
 
 nav ul li a {
-    font-family: 'Times New Roman', Times, serif;
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease;
+    color: #fff; /* White text for links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Transition effect for hover */
 }
 
 nav ul li a:hover {
-    color: #ffeb3b; /* Yellow hover effect */
+    color: #ffcc00; /* Change color on hover */
 }
 
-/* Search bar */
+/* Search Bar Styles */
 .search-bar {
-    margin-top: 10px;
+    display: flex;
 }
 
-.search-bar input[type="text"] {
-    font-family: 'Times New Roman', Times, serif;
-    padding: 10px;
-    width: 250px;
+.search-bar input {
+    padding: 5px;
     border: none;
-    border-radius: 5px;
-    margin-right: 10px;
+    border-radius: 5px 0 0 5px; /* Rounded corners */
 }
 
 .search-bar button {
-    font-family: 'Times New Roman', Times, serif;
-    padding: 10px 20px;
-    background-color: #ff5722;
+    padding: 5px 10px;
     border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    border-radius: 0 5px 5px 0; /* Rounded corners */
+    background-color: #ffcc00; /* Button color */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Transition effect */
 }
 
 .search-bar button:hover {
-    background-color: #e64a19;
+    background-color: #e6b800; /* Darker button color on hover */
 }
 
-/* Responsive Grid */
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
-    gap: 20px; /* Space between cards */
-    margin-top: 50px;
-    padding: 0 10px; /* Some padding for mobile */
+/* Section Styles */
+.offers, .product-grid {
+    margin: 20px 0;
 }
 
-.product-item {
-    background-color: #ffffff;
-    border-radius: 10px;
-    border: 1px solid #dcdcdc;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.offers h2, .product-grid h2 {
     text-align: center;
-    transition: transform 0.3s ease;
-    overflow: hidden; /* To ensure images don't overflow */
+    color: #ffcc00; /* Highlight color for headings */
 }
 
-.product-item:hover {
-    transform: translateY(-5px);
-}
-
-.product-item img {
-    width: 100%;
-    height: auto;
-    max-height: 180px; /* Limit image height */
-    object-fit: cover; /* Ensures image fits well in the container */
-    border-bottom: 2px solid #3f51b5;
-    margin-bottom: 15px;
-}
-
-.product-item h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #333;
-    font-weight: 600;
-}
-
-.product-item p.price {
-    font-size: 16px;
-    color: #3f51b5; /* Make price color pop */
-    font-weight: bold;
-}
-
-.product-item .details-btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #3f51b5;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.product-item .details-btn:hover {
-    background-color: #283593;
-}
-
-/* Media Queries for Mobile */
-@media (max-width: 768px) {
-    .product-grid {
-        grid-template-columns: 1fr; /* Single column for small screens */
-    }
-
-    .product-item {
-        padding: 15px;
-    }
-
-    .product-item img {
-        max-height: 150px; /* Smaller images for mobile */
-    }
-
-    .product-item h3 {
-        font-size: 16px; /* Slightly smaller text on mobile */
-    }
-
-    .product-item p.price {
-        font-size: 14px;
-    }
-}
-
-/* Footer styles */
-footer {
-    font-family: 'Times New Roman', Times, serif;
-    background-color: rgba(63, 81, 181, 0.8);
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
-    font-size: 14px;
-}
-
-/* Highlight yellow text */
-.highlight {
-    color: #ffeb3b; /* Bright yellow */
-}
-
-/* Offer Section */
 .offer-images {
-    position: relative;
-    height: 300px;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
 }
 
 .offer-images img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 300px;
-    opacity: 0;
-    transition: opacity 1s ease;
+    max-width: 100%;
+    height: auto;
+    margin: 0 10px; /* Spacing between images */
+    opacity: 0; /* Start hidden for slideshow */
+    transition: opacity 0.5s ease; /* Fade effect for slideshow */
 }
 
 .offer-images img.active {
-    opacity: 1;
+    opacity: 1; /* Show active image */
+}
+
+/* Product Grid Styles */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap; /* Wrap items to next line */
+    justify-content: center; /* Center items */
+}
+
+.product-item {
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center text */
+    transition: transform 0.3s ease; /* Transition for scaling */
+}
+
+.product-item:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.product-item img {
+    max-width: 100%; /* Responsive image */
+    border-radius: 5px; /* Rounded corners for images */
+}
+
+.product-item h3 {
+    margin: 10px 0; /* Space above and below heading */
+}
+
+.price {
+    font-size: 1.2em; /* Larger font for price */
+    color: #ffcc00; /* Highlight color for price */
+}
+
+/* Button Styles */
+.details-btn {
+    display: inline-block;
+    background: #ffcc00; /* Button color */
+    color: #000; /* Black text for button */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease; /* Transition effect */
+}
+
+.details-btn:hover {
+    background: #e6b800; /* Darker button color on hover */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent footer */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .product-item {
+        flex: 1 0 45%; /* Two items per row on mobile */
+    }
+
+    .search-bar {
+        flex-direction: column; /* Stack search input and button */
+        align-items: center; /* Center items */
+    }
+
+    .search-bar input, .search-bar button {
+        width: 100%; /* Full width on mobile */
+        margin: 5px 0; /* Space between input and button */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-item {
+        flex: 1 0 100%; /* One item per row on very small screens */
+    }
 }
