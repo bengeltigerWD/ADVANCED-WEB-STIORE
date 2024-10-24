@@ -6,35 +6,30 @@
 }
 
 body {
-    font-family: 'Times New Roman', Times, serif;
-    background: url('space.jpg') no-repeat center center fixed;
-    background-size: cover;
+    font-family: 'Arial', sans-serif; /* Changed font for a modern look */
+    background: url('space.jpg') no-repeat center center fixed; /* Background stays */
+    background-size: cover; /* Ensures full cover */
     color: #fff;
-    padding: 20px;
+    line-height: 1.6; /* Improved readability */
 }
 
 /* Header Styles */
 header {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
     text-align: center;
 }
 
-.container {
-    display: flex;
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center elements */
-}
-
 .logo h1 {
-    font-size: 2.5em;
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 nav ul {
     list-style-type: none;
-    display: flex; 
-    flex-wrap: wrap; 
-    justify-content: center; 
+    display: flex;
+    justify-content: center;
     padding: 10px 0;
 }
 
@@ -43,19 +38,22 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #ffcc00;
     text-decoration: none;
-    transition: color 0.3s ease;
+    padding: 5px 10px;
+    transition: background 0.3s, color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ffcc00;
+    background: rgba(255, 204, 0, 0.2);
+    border-radius: 5px;
 }
 
 /* Search Bar Styles */
 .search-bar {
     display: flex;
-    margin-top: 15px; 
+    justify-content: center;
+    margin-top: 15px;
 }
 
 .search-bar input {
@@ -70,8 +68,9 @@ nav ul li a:hover {
     border: none;
     border-radius: 0 5px 5px 0;
     background-color: #ffcc00;
+    color: #000;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
 .search-bar button:hover {
@@ -81,11 +80,13 @@ nav ul li a:hover {
 /* Section Styles */
 .offers, .product-grid {
     margin: 20px 0;
+    text-align: center;
 }
 
 .offers h2, .product-grid h2 {
-    text-align: center;
     color: #ffcc00;
+    margin-bottom: 20px;
+    font-size: 2.5em; /* Increased size for emphasis */
 }
 
 .offer-images {
@@ -96,15 +97,14 @@ nav ul li a:hover {
 }
 
 .offer-images img {
-    max-width: 100%;
+    max-width: 90%; /* Adjusted for better mobile display */
     height: auto;
-    margin: 10px; /* Adjust margin for better spacing */
-    opacity: 0;
-    transition: opacity 0.5s ease;
+    margin: 10px;
+    transition: transform 0.3s; /* Added zoom effect */
 }
 
-.offer-images img.active {
-    opacity: 1;
+.offer-images img:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
 }
 
 /* Product Grid Styles */
@@ -115,30 +115,31 @@ nav ul li a:hover {
 }
 
 .product-item {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent for effect */
     color: #000;
     margin: 10px;
     padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: calc(25% - 20px); /* Four items per row */
+    flex: 1 0 21%; /* Four items per row */
 }
 
 .product-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
 }
 
 .product-item img {
     max-width: 100%;
-    height: auto; /* Ensure images maintain aspect ratio */
+    height: auto;
     border-radius: 5px;
 }
 
 .product-item h3 {
     margin: 10px 0;
+    font-size: 1.5em; /* Increased font size */
 }
 
 .price {
@@ -155,7 +156,7 @@ nav ul li a:hover {
     border: none;
     border-radius: 5px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
 .details-btn:hover {
@@ -167,13 +168,13 @@ footer {
     text-align: center;
     margin-top: 20px;
     padding: 10px;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.7);
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
     .product-item {
-        width: calc(50% - 20px); /* Two items per row on mobile */
+        flex: 1 0 46%; /* Two items per row on mobile */
     }
 
     .search-bar {
@@ -194,6 +195,14 @@ footer {
 
 @media (max-width: 480px) {
     .product-item {
-        width: 100%; /* One item per row on very small screens */
+        flex: 1 0 90%; /* One item per row on very small screens */
+    }
+
+    .logo h1 {
+        font-size: 2.5em; /* Adjust logo size for smaller screens */
+    }
+
+    .offers h2, .product-grid h2 {
+        font-size: 2em; /* Adjust heading size */
     }
 }
