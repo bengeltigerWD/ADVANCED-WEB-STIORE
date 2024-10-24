@@ -166,33 +166,29 @@
         <p>&copy; 2024 Website Store. All rights reserved.</p>
         <div class="social-media">
             <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
             <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
         </div>
     </footer>
 
     <script>
         let slideIndex = 0;
-        const slides = document.querySelectorAll('.slide');
-
-        function showSlides() {
-            slides.forEach(slide => slide.style.display = "none");
-            slideIndex++;
-            if (slideIndex >= slides.length) { slideIndex = 0; }
-            slides[slideIndex].style.display = "block";
-            setTimeout(showSlides, 2000); // Change image every 2 seconds
-        }
+        showSlides();
 
         function changeSlide(n) {
-            slides[slideIndex].style.display = "none";
             slideIndex += n;
-            if (slideIndex >= slides.length) { slideIndex = 0; }
-            if (slideIndex < 0) { slideIndex = slides.length - 1; }
-            slides[slideIndex].style.display = "block";
+            showSlides();
         }
 
-        showSlides();
-    </script>
+        function showSlides() {
+            const slides = document.querySelectorAll('.slide');
+            if (slideIndex >= slides.length) {slideIndex = 0}    
+            if (slideIndex < 0) {slideIndex = slides.length - 1}
 
+            slides.forEach((slide, index) => {
+                slide.style.display = (index === slideIndex) ? 'block' : 'none';
+            });
+        }
+    </script>
 </body>
 </html>
