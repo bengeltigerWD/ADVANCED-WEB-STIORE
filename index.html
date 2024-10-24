@@ -14,8 +14,8 @@
                 <h1>Advanced Web Store</h1>
             </div>
             <div class="search-bar">
-                <input type="text" placeholder="Search for products...">
-                <button>Search</button>
+                <input type="text" id="searchQuery" placeholder="Search for products...">
+                <button id="searchBtn">Search</button>
             </div>
             <nav>
                 <ul>
@@ -27,7 +27,7 @@
         </div>
     </header>
 
-    <!-- Offer Images Section -->
+   <!-- Offer Images Section -->
     <section class="offers">
         <h2>Special Offers</h2>
         <div class="offer-images" id="offerImages">
@@ -67,13 +67,13 @@
             <a href="product4.html" class="details-btn">Details</a>
         </div>
     </section>
-
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 Advanced Web Store. All Rights Reserved.</p>
     </footer>
 
     <script>
+        // Image slider functionality
         const images = document.querySelectorAll('#offerImages img');
         let currentIndex = 0;
 
@@ -88,6 +88,21 @@
 
         // Change image every 4 seconds
         setInterval(showNextImage, 4000);
+
+        // Search button functionality
+        const searchBtn = document.getElementById('searchBtn');
+        const searchQuery = document.getElementById('searchQuery');
+
+        searchBtn.addEventListener('click', () => {
+            const query = searchQuery.value.trim();
+            if (query) {
+                // Implement search logic (Redirect to search results page or filter products)
+                alert('Search initiated for: ' + query);
+                // Replace this alert with actual search functionality
+            } else {
+                alert('Please enter a search term.');
+            }
+        });
     </script>
 </body>
 </html>
