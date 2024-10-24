@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Times New Roman', Times, serif; /* Set Times New Roman font */
-    background: url('background.jpg') no-repeat center center fixed; /* Background image */
+    background: url('space.jpg') no-repeat center center fixed; /* Background image */
     background-size: cover; /* Ensure background covers full screen */
     color: #333;
     padding: 20px;
