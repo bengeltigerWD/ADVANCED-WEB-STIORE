@@ -6,8 +6,9 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f7fc; /* Light gray-blue background */
+    font-family: 'Times New Roman', Times, serif; /* Set Times New Roman font */
+    background: url('background.jpg') no-repeat center center fixed; /* Background image */
+    background-size: cover; /* Cover entire page */
     color: #333;
     padding: 20px;
 }
@@ -22,6 +23,7 @@ header {
 }
 
 header .logo h1 {
+    font-family: 'Times New Roman', Times, serif; /* Apply Times New Roman */
     font-size: 32px;
     font-weight: 700;
 }
@@ -38,6 +40,7 @@ nav ul li {
 }
 
 nav ul li a {
+    font-family: 'Times New Roman', Times, serif; /* Apply Times New Roman */
     color: #fff;
     text-decoration: none;
     font-size: 18px;
@@ -54,6 +57,7 @@ nav ul li a:hover {
 }
 
 .search-bar input[type="text"] {
+    font-family: 'Times New Roman', Times, serif; /* Apply Times New Roman */
     padding: 10px;
     width: 250px;
     border: none;
@@ -62,6 +66,7 @@ nav ul li a:hover {
 }
 
 .search-bar button {
+    font-family: 'Times New Roman', Times, serif; /* Apply Times New Roman */
     padding: 10px 20px;
     background-color: #ff5722; /* Bright orange */
     border: none;
@@ -105,6 +110,7 @@ nav ul li a:hover {
 }
 
 .product-item h3 {
+    font-family: 'Times New Roman', Times, serif; /* Apply Times New Roman */
     font-size: 20px;
     margin-bottom: 15px;
     color: #3f51b5;
@@ -112,11 +118,13 @@ nav ul li a:hover {
 }
 
 .product-item p {
+    font-family: 'Times New Roman', Times, serif; /* Apply Times New Roman */
     font-size: 16px;
     color: #757575; /* Modern gray for price */
 }
 
 .product-item .details-btn {
+    font-family: 'Times New Roman', Times, serif; /* Apply Times New Roman */
     display: inline-block;
     margin-top: 10px;
     padding: 10px 20px;
@@ -133,6 +141,7 @@ nav ul li a:hover {
 
 /* Footer styles */
 footer {
+    font-family: 'Times New Roman', Times, serif; /* Apply Times New Roman */
     background-color: #3f51b5;
     color: #fff;
     text-align: center;
@@ -144,7 +153,7 @@ footer {
 /* Offer Section */
 .offer-images {
     position: relative;
-    height: 200px; /* Adjust according to your image height */
+    height: 400px; /* Adjusted for larger screens */
     overflow: hidden;
     margin-bottom: 50px;
     border-radius: 10px;
@@ -153,7 +162,8 @@ footer {
 .offer-images img {
     position: absolute;
     width: 100%;
-    height: auto;
+    height: 100%; /* Ensure full coverage of the offer section */
+    object-fit: cover; /* Scale the image correctly */
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
@@ -166,6 +176,10 @@ footer {
 @media (max-width: 768px) {
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .offer-images {
+        height: 250px; /* Reduced height for mobile */
     }
 }
 
