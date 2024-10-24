@@ -7,29 +7,17 @@
 
 body {
     font-family: 'Times New Roman', Times, serif; /* Set Times New Roman font */
-    background: url('background.jpg') no-repeat center center fixed; /* Background image */
-    background-color: black; /* Set background color to black */
+    background: url('background.jpg') no-repeat center center fixed; /* Custom background image */
+    background-size: cover; /* Cover the entire body */
     color: #fff; /* Set text color to white for content areas */
     padding: 20px;
-}
-
-/* Overlay for background image */
-body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.3); /* Lighter overlay */
-    z-index: 0; /* Behind all content */
 }
 
 /* Main content area with a different background color */
 .content {
     position: relative; /* Required to place content above the overlay */
     z-index: 1; /* On top of the overlay */
-    background-color: white; /* Lighter background for content */
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for content with transparency */
     padding: 20px;
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Light shadow for depth */
@@ -37,7 +25,7 @@ body::before {
 
 /* Header styles */
 header {
-    background-color: #3f51b5; /* Modern blue */
+    background-color: rgba(63, 81, 181, 0.8); /* Semi-transparent modern blue */
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -189,7 +177,7 @@ nav ul li a:hover {
 /* Footer styles */
 footer {
     font-family: 'Times New Roman', Times, serif;
-    background-color: #3f51b5;
+    background-color: rgba(63, 81, 181, 0.8);
     color: #fff;
     text-align: center;
     padding: 20px 0;
