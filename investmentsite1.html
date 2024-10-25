@@ -8,6 +8,154 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Web Store</title>  
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Times New Roman", Times, serif;
+        }
+        body {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        /* Loading Screen Style */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        #loading-screen img {
+            width: 200px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        #loading-screen h1 {
+            font-size: 24px;
+            color: #333;
+        }
+        /* Hidden Content */
+        #main-content {
+            display: none;
+        }
+        /* Header */
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: black;
+            color: white;
+        }
+        .header img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+        .header .nav-links {
+            display: flex;
+            gap: 10px;
+        }
+        .header a {
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+        }
+        /* Site Title & Search with Background */
+        .site-background {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            padding: 20px 0;
+            text-align: center;
+            color: #fff;
+        }
+        .site-title h1 {
+            font-size: 24px;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+        .site-title p {
+            font-size: 14px;
+            color: #e0e0e0;
+        }
+        
+        }
+      
+            border: none;
+            cursor: pointer;
+            border-radius: 0 5px 5px 0;
+        }
+        /* Slideshow */
+        .slideshow {
+            width: 100%;
+            max-width: 500px;
+            height: 200px;
+            margin: 20px auto;
+            overflow: hidden;
+            position: relative;
+            border-radius: 5px;
+        }
+        .slideshow img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+        .slideshow img.active {
+            opacity: 1;
+        }
+        /* Category Section */
+        .categories {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .categories h2 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .category-list {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .category {
+            padding: 8px 12px;
+            color: #333;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .category:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+
+        <!-- Site Title & Search with Background -->
+        <section class="site-background">
+            <div class="site-title">
+                <h1>Advanced Web Store</h1>
+                <p>Find the best websites at the best prices</p>
+            </div>
+
     <!-- Back and Home Buttons -->
 <div class="navigation-buttons">
     
