@@ -342,15 +342,21 @@
         </footer>
     </div>
 
+    <!-- JavaScript for Loading Screen and Slideshow -->
     <script>
-        // Function to hide the loading screen and show the main content
+        let slideIndex = 0;
+        function showSlides() {
+            const slides = document.querySelectorAll('.slideshow img');
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[slideIndex].classList.add('active');
+            slideIndex = (slideIndex + 1) % slides.length;
+            setTimeout(showSlides, 3000); // Change slide every 3 seconds
+        }
         window.onload = function() {
-            setTimeout(function() {
-                document.getElementById('loading-screen').style.display = 'none';
-                document.getElementById('main-content').style.display = 'block';
-            }, 2000); // Loading screen duration in milliseconds
+            document.getElementById('loading-screen').style.display = 'none';
+            document.getElementById('main-content').style.display = 'block';
+            showSlides();
         };
     </script>
-
 </body>
 </html>
