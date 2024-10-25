@@ -237,7 +237,7 @@
         <!-- Slideshow -->
         <div class="slideshow">
              <img src="card3.jpg" alt="Slide 1"class="active">
-            <img src="Card4.jpg" alt="Slide 2"> 
+            <img src="card4.jpg" alt="Slide 2"> 
             <img src="card2.jpg" alt="Slide 3">
             <img src="Card1.jpg" alt="Slide 4">
         </div>
@@ -348,7 +348,7 @@
             slides.forEach(slide => slide.classList.remove('active'));
             slides[slideIndex].classList.add('active');
             slideIndex = (slideIndex + 1) % slides.length;
-            setTimeout(showSlides, 3000); // Change slide every 3 seconds
+            setTimeout(showSlides, 10000); // Change slide every 3 seconds
         }
         window.onload = function() {
             document.getElementById('loading-screen').style.display = 'none';
