@@ -4,99 +4,206 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advanced Web Store</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Times New Roman", Times, serif;
+        }
+        body {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        /* Header */
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: black;
+            color: white;
+        }
+        .header img {
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+        }
+        .header .nav-links {
+            display: flex;
+            gap: 10px;
+        }
+        .header a {
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+        }
+        /* Site Title & Search */
+        .site-title {
+            text-align: center;
+            margin: 15px 0;
+        }
+        .site-title h1 {
+            font-size: 20px;
+            color: #000;
+        }
+        .site-title p {
+            font-size: 12px;
+            color: #666;
+        }
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+        .search-box, .search-button {
+            height: 30px;
+            font-size: 14px;
+        }
+        .search-box {
+            width: 70%;
+            padding: 5px;
+            border: 1px solid #ddd;
+            background-color: #d0e0f5;
+        }
+        .search-button {
+            width: 20%;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        /* Image Slider */
+        .slider {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            height: 1.5in;
+            margin: 15px 0;
+        }
+        .slide-image {
+            width: 100%;
+            object-fit: cover;
+            animation: slide 20s infinite;
+        }
+        @keyframes slide {
+            0%, 20% { transform: translateX(0); }
+            25%, 45% { transform: translateX(-100%); }
+            50%, 70% { transform: translateX(-200%); }
+            75%, 95% { transform: translateX(-300%); }
+        }
+        /* Product Cards */
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            padding: 10px;
+        }
+        .product-card {
+            width: 45%;
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .product-card img {
+            width: 100%;
+            border-radius: 4px;
+        }
+        .product-card h3 {
+            font-size: 14px;
+            color: #333;
+            margin: 10px 0;
+        }
+        .product-card p {
+            font-size: 12px;
+            color: #555;
+            margin-bottom: 8px;
+        }
+        .product-card .details-button {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background-color: black;
+            color: white;
+            font-size: 12px;
+        }
+    </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <div class="container">
-            <div class="logo">
-                <h1>Advanced Web Store</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Websites</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="search-bar">
-                <input type="text" id="search" placeholder="Search websites...">
-                <button id="searchBtn">Search</button>
-            </div>
+
+    <!-- Header -->
+    <header class="header">
+        <img src="logo.png" alt="Logo">
+        <div class="nav-links">
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+            <a href="#office">Offi Site</a>
         </div>
     </header>
 
-    <!-- Offer Images Section -->
-    <section class="offers">
-        <h2 class="highlight">Special Offers</h2>
-        <div class="offer-images" id="offerImages">
-            <img src="Ajmir.Edit.JPG" alt="Offer 1" class="active">
-            <img src="Ajmir.png" alt="Offer 2">
-            <img src="space.jpg" alt="Offer 3">
-            <img src="youtoub.png" alt="Offer 4">
-            <img src="space.jpg" alt="Offer 5">
+    <!-- Site Title & Search -->
+    <section class="site-title">
+        <h1>Advanced Web Store</h1>
+        <p>Buy Premium Website</p>
+    </section>
+
+    <div class="search-container">
+        <input type="text" class="search-box" placeholder="Search here...">
+        <button class="search-button">Search</button>
+    </div>
+
+    <!-- Image Slider -->
+    <div class="slider">
+        <img src="image1.jpg" alt="Image 1" class="slide-image">
+        <img src="image2.jpg" alt="Image 2" class="slide-image">
+        <img src="image3.jpg" alt="Image 3" class="slide-image">
+        <img src="image4.jpg" alt="Image 4" class="slide-image">
+        <img src="image5.jpg" alt="Image 5" class="slide-image">
+    </div>
+
+    <!-- Product Cards -->
+    <section class="products">
+        <div class="product-card">
+            <img src="product1.jpg" alt="Product 1">
+            <h3>Product Name 1</h3>
+            <p>$19.99</p>
+            <a href="#" class="details-button">Details</a>
+        </div>
+        <div class="product-card">
+            <img src="product2.jpg" alt="Product 2">
+            <h3>Product Name 2</h3>
+            <p>$29.99</p>
+            <a href="#" class="details-button">Details</a>
+        </div>
+        <div class="product-card">
+            <img src="product3.jpg" alt="Product 3">
+            <h3>Product Name 3</h3>
+            <p>$24.99</p>
+            <a href="#" class="details-button">Details</a>
+        </div>
+        <div class="product-card">
+            <img src="product4.jpg" alt="Product 4">
+            <h3>Product Name 4</h3>
+            <p>$39.99</p>
+            <a href="#" class="details-button">Details</a>
         </div>
     </section>
 
-    <!-- Product Section -->
-    <section class="product-grid">
-        <h2 class="highlight">Available Websites</h2>
-        <div class="product-item">
-            <img src="space.jpg" alt="Website 1">
-            <h3>Business Website 1</h3>
-            <p class="price">Price: $399</p>
-            <a href="product1.html" class="details-btn">Details</a>
-        </div>
-        <div class="product-item">
-            <img src="space.jpg" alt="Website 2">
-            <h3>E-commerce Website 2</h3>
-            <p class="price">Price: $599</p>
-            <a href="product2.html" class="details-btn">Details</a>
-        </div>
-        <div class="product-item">
-            <img src="space.jpg" alt="Website 3">
-            <h3>Portfolio Website 3</h3>
-            <p class="price">Price: $249</p>
-            <a href="product3.html" class="details-btn">Details</a>
-        </div>
-        <div class="product-item">
-            <img src="space.jpg" alt="Website 4">
-            <h3>Blog Website 4</h3>
-            <p class="price">Price: $199</p>
-            <a href="product4.html" class="details-btn">Details</a>
-        </div>
-    </section>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 Advanced Web Store. All Rights Reserved.</p>
+    <!-- Footer -->
+    <footer class="footer">
+        ALL RIGHTS RESERVED 2024
     </footer>
 
-    <!-- JavaScript for Search Button and Slideshow -->
-    <script>
-        document.getElementById('searchBtn').addEventListener('click', function() {
-            const searchTerm = document.getElementById('search').value;
-            if (searchTerm) {
-                alert('Searching for: ' + searchTerm);
-            } else {
-                alert('Please enter a search term.');
-            }
-        });
-
-        // Slideshow Functionality
-        let slideIndex = 0;
-        const slides = document.querySelectorAll('#offerImages img');
-        function showSlides() {
-            slides.forEach((slide, index) => {
-                slide.style.opacity = '0';
-            });
-            slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1; }
-            slides[slideIndex - 1].style.opacity = '1';
-            setTimeout(showSlides, 4000); // 4 seconds
-        }
-        showSlides();
-    </script>
 </body>
 </html>
