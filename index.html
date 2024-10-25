@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Web Store</title>
+    <title>Advanced Web Store</title>  
     <style>
         * {
             margin: 0;
@@ -105,6 +105,26 @@
             cursor: pointer;
             border-radius: 0 5px 5px 0;
         }
+        /* Slideshow */
+        .slideshow {
+            width: 100%;
+            max-width: 500px;
+            height: 200px;
+            margin: 20px auto;
+            overflow: hidden;
+            position: relative;
+            border-radius: 5px;
+        }
+        .slideshow img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+        .slideshow img.active {
+            opacity: 1;
+        }
         /* Category Section */
         .categories {
             text-align: center;
@@ -185,7 +205,7 @@
 
     <!-- Loading Screen -->
     <div id="loading-screen">
-        <img src="logo.png" alt="Logo"> <!-- নিশ্চিত করুন ফাইল সঠিক ফোল্ডারে আছে -->
+        <img src="logo.png" alt="Logo">
         <h1>Loading, please wait...</h1>
     </div>
 
@@ -214,17 +234,27 @@
             </div>
         </section>
 
+        <!-- Slideshow -->
+        <div class="slideshow">
+            <img src="slide1.jpg" alt="Slide 1" class="active">
+            <img src="slide2.jpg" alt="Slide 2">
+            <img src="slide3.jpg" alt="Slide 3">
+            <img src="slide4.jpg" alt="Slide 4">
+            <img src="slide5.jpg" alt="Slide 5">
+        </div>
+
         <!-- Category Section -->
         <section class="categories">
             <h2>Our Categories</h2>
             <div class="category-list">
                 <div class="category">E-commerce</div>
                 <div class="category">Buy Code</div>
-                <div class="category">investment Site</div>
+                <div class="category">Investment Site</div>
                 <div class="category">Choose You</div>
-                
             </div>
         </section>
+
+       
 
         <!-- Product Cards -->
         <section class="products">
