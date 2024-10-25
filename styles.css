@@ -1,0 +1,58 @@
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+}
+
+.slides {
+    display: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.description-box {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+}
+
+.buy-now {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
