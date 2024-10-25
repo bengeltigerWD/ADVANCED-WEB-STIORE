@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- Slide Show -->
+    <div class="slideshow-container">
+        <div class="slides fade">
+            <img src="image1.jpg" alt="Image 1" style="width:100%">
+        </div>
+        <div class="slides fade">
+            <img src="image2.jpg" alt="Image 2" style="width:100%">
+        </div>
+        <div class="slides fade">
+            <img src="image3.jpg" alt="Image 3" style="width:100%">
+        </div>
+        <div class="slides fade">
+            <img src="image4.jpg" alt="Image 4" style="width:100%">
+        </div>
+        <div class="slides fade">
+            <img src="image5.jpg" alt="Image 5" style="width:100%">
+        </div>
+        <div class="slides fade">
+            <img src="image6.jpg" alt="Image 6" style="width:100%">
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <!-- Website Details -->
+    <h2 id="website-name">Website Name</h2>
+    <p id="website-price">Price: $500</p>
+
+    <!-- Description Box -->
+    <div class="description-box">
+        <h3>Description</h3>
+        <p>This is a detailed description of the website. Here you can add all the important information about the website, including features, usability, and additional information that may attract potential buyers.</p>
+    </div>
+
+    <!-- Buy Now Button -->
+    <button class="buy-now">Buy Now</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
