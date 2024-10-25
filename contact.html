@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles1.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            gap: 15px;
+        }
+        .nav-buttons button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            font-size: 14px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .nav-buttons button:hover {
+            background-color: #0056b3;
+        }
+        .contact-container {
+            padding: 20px;
+            text-align: center;
+        }
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .contact-item img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .contact-item a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .contact-item p {
+            font-size: 16px;
+            margin: 0;
+        }
+        .contact-form {
+            margin-top: 40px;
+            text-align: center;
+        }
+        .contact-form h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        .contact-form label {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .contact-form button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+        .contact-address {
+            margin-top: 40px;
+            text-align: center;
+        }
+        .contact-address h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .contact-address p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .nav-buttons {
+                flex-direction: row;
+                gap: 10px;
+                justify-content: center;
+            }
+            .nav-buttons button {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+            .contact-item img {
+                width: 40px;
+                height: 40px;
+            }
+            .contact-item a, .contact-item p {
+                font-size: 14px;
+            }
+            .contact-form input, .contact-form textarea {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Bengal Tiger Web Development Limited</h1>
+        <!-- Navigation Buttons -->
+        <div class="nav-buttons">
+            <button onclick="window.location.href='index.html'">Home</button>
+            <button onclick="window.history.back()">Back</button>
+        </div>
+    </header>
+    
+    <!-- Contact Information -->
+    <div class="contact-container">
+        <p>We'd love to hear from you! Whether you have questions, feedback, or just want to say hello, feel free to reach out to us through any of the following methods:</p>
+        
+        <div class="contact-info">
+            <!-- Telegram -->
+            <div class="contact-item">
+                <img src="telegram.jpeg" alt="Telegram">
+                <a href="https://t.me/Ajmir100" target="_blank">Telegram</a>
+            </div>
+            <!-- YouTube -->
+            <div class="contact-item">
+                <img src="youtoub.png" alt="YouTube">
+                <a href="https://www.youtube.com/@BengalTigerWebTech" target="_blank">YouTube</a>
+            </div>
+            <!-- Facebook -->
+            <div class="contact-item">
+                <img src="facebook.png" alt="Facebook">
+                <a href="https://www.facebook.com/profile.php?id=100083235735194&mibextid=JRoKGi" target="_blank">Facebook</a>
+            </div>
+            <!-- Mobile -->
+            <div class="contact-item">
+                <p>Mobile: <a href="tel:01938954599">01938954599</a></p>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form action="mailto:ajmirahemed75@gmail.com" method="post" enctype="text/plain">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+        
+        <!-- Company Address -->
+        <div class="contact-address">
+            <h2>Our Address</h2>
+            <p>Bengal Tiger Web Development Limited</p>
+            <p>Bangladesh</p>
+            <p>Email: <a href="mailto:ajmirahemed75@gmail.com">ajmirahemed75@gmail.com</a></p>
+        </div>
+    </div>
+
+    <script>
+        function goToPage(page) {
+            window.location.href = page;
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+    <!-- Statcounter code -->
+    <script type="text/javascript">
+        var sc_project=13037502; 
+        var sc_invisible=1; 
+        var sc_security="dd3f9559"; 
+    </script>
+    <script type="text/javascript"
+    src="https://www.statcounter.com/counter/counter.js"
+    async></script>
+    <noscript><div class="statcounter"><a title="Web Analytics"
+    href="https://statcounter.com/" target="_blank"><img
+    class="statcounter"
+    src="https://c.statcounter.com/13037502/0/dd3f9559/1/"
+    alt="Web Analytics"
+    referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Bengal Tiger Web Development Limited. All rights reserved.</p>
+    </footer>
+</body>
+</html>
