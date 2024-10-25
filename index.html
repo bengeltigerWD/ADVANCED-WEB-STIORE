@@ -78,25 +78,39 @@
             cursor: pointer;
             border-radius: 0 5px 5px 0;
         }
-        /* Category Section */
-        .categories {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin: 20px 0;
-            padding: 10px;
-        }
-        .category {
-            padding: 10px;
-            background-color: #007bff;
-            color: white;
-            border-radius: 5px;
-            font-size: 14px;
-            text-align: center;
-            cursor: pointer;
-            flex: 1;
-            max-width: 150px;
-        }
+     /* Category Section */
+.categories {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.categories h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.category-list {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.category {
+    padding: 8px 12px;
+    color: #333;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.category:hover {
+    background-color: #f0f0f0;
+}
+
+
         /* Product Cards */
         .products {
             display: flex;
@@ -171,14 +185,18 @@
         </div>
     </section>
 
-    <!-- Category Section -->
-    <section class="categories">
+<!-- Category Section -->
+<section class="categories">
+    <h2>Our Categories</h2>
+    <div class="category-list">
         <div class="category">E-commerce</div>
         <div class="category">Portfolio</div>
         <div class="category">Blogs</div>
         <div class="category">Landing Pages</div>
         <div class="category">Social Platforms</div>
-    </section>
+    </div>
+</section>
+
 
     <!-- Product Cards -->
     <section class="products">
