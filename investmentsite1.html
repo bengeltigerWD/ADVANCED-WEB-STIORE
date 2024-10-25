@@ -1,62 +1,54 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Details</title>
+    <title>Advanced Web Store</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .site-background {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            padding: 20px 0;
+            text-align: center;
+            color: #fff;
+        }
+
+        .site-title {
+            background-color: blue; /* নীল ব্যাকগ্রাউন্ড যোগ করা */
+            padding: 10px; /* কিছু প্যাডিং যোগ করা */
+        }
+
+        .buy-now-button {
+            background-color: #4CAF50; /* সবুজ ব্যাকগ্রাউন্ড */
+            color: white; /* সাদা টেক্সট */
+            border: none; /* কোন বর্ডার নেই */
+            padding: 10px 20px; /* উপরে/নিচে এবং বামে/ডানে প্যাডিং */
+            text-align: center; /* টেক্সট সেন্টার */
+            text-decoration: none; /* আন্ডারলাইন সরিয়ে ফেলা */
+            display: inline-block; /* ইনলাইন বানানো */
+            font-size: 16px; /* ফন্ট সাইজ */
+            margin: 10px 2px; /* মার্জিন */
+            cursor: pointer; /* হোভার করার সময় পয়েন্টার কার্সর */
+            border-radius: 5px; /* গোলাকার কোণ */
+            transition: background-color 0.3s ease; /* স্মুথ ট্রানজিশন */
+        }
+
+        .buy-now-button:hover {
+            background-color: #45a049; /* হোভার করার সময় গা darker  সবুজ */
+        }
+    </style>
 </head>
 <body>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Web Store</title>  
-    <style>
-       .site-background {
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
-    padding: 20px 0;
-    text-align: center;
-    color: #fff;
-}
 
-.site-title {
-    background-color: blue; /* Add this line */
-    padding: 10px; /* Optional: Add some padding for aesthetics */
-}
-
-.buy-now-button {
-    background-color: #4CAF50; /* Green background */
-    color: white; /* White text */
-    border: none; /* No border */
-    padding: 10px 20px; /* Top/bottom and left/right padding */
-    text-align: center; /* Center the text */
-    text-decoration: none; /* Remove underline */
-    display: inline-block; /* Make it inline */
-    font-size: 16px; /* Font size */
-    margin: 10px 2px; /* Margins for spacing */
-    cursor: pointer; /* Pointer cursor on hover */
-    border-radius: 5px; /* Rounded corners */
-    transition: background-color 0.3s ease; /* Smooth transition */
-}
-
-.buy-now-button:hover {
-    background-color: #45a049; /* Darker green on hover */
-}
-
-
-        <section class="site-background">
-    <div class="site-title" style="background-color: blue; padding: 10px;"> <!-- Added blue background -->
+<section class="site-background">
+    <div class="site-title">
         <h1>Advanced Web Store</h1>
         <p>Find the best websites at the best prices</p>
     </div>
 </section>
 
-    <!-- Back and Home Buttons -->
+<!-- Back and Home Buttons -->
 <div class="navigation-buttons">
-    
     <a href="index.html"><button>Home</button></a>
 </div>
 
@@ -78,7 +70,6 @@
         <div class="slides fade">
             <img src="photo_2024-10-25_17-59-59.jpg" alt="Image 5" style="width:100%">
         </div>
-       
 
         <!-- Next and previous buttons -->
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -86,39 +77,30 @@
     </div>
 
     <!-- Website Details -->
-    <h2 id="website-name">New desing Investment site</h2>
-    <p id="website-price">Price:৳1550 (25%off)</p>
+    <h2 id="website-name">New design Investment site</h2>
+    <p id="website-price">Price: ৳1550 (25% off)</p>
     <p id="website-code">Website Code o10101</p>
     <!-- Buy Now Button -->
-    <button class="oder.html">Buy Now</button>
+    <a href="oder.html" class="buy-now-button">Buy Now</a> <!-- লিংক যুক্ত করা হয়েছে -->
 
     <!-- Description Box -->
     <div class="description-box">
-       <div class="container">
-    <h1>আমাদের সাইটের বৈশিষ্ট্যসমূহ</h1>
-    
-    <ul class="feature-list">
-        <li>১. সাইটে আপনি এডমিন প্যানেল থেকে সবকিছু পরিচালনা করতে পারবেন, সবকিছু পরিবর্তন করতে পারবেন।</li>
-        <li>২. এডমিন প্যানেল থেকে টাকা উত্তোলনের পরিমাণ পরিবর্তন করতে পারবেন।</li>
-        <li>৩. এডমিন প্যানেল থেকে কন্টাক্ট, সার্ভিস এবং আপনার যাবতীয় তথ্য আপডেট করতে পারবেন।</li>
-        <li>৪. এডমিন প্যানেল থেকে প্রত্যেক ইউজারের আইডিতে পরিবর্তন করতে পারবেন।</li>
-        <li>৫. সকলের একাউন্ট ব্যালেন্স পরিবর্তন করতে পারবেন।</li>
-        <li>৬. এডমিন প্যানেল থেকে অপশন বিকাশ, নগদ ইত্যাদি দিতে পারবেন।</li>
-    </ul>
-    
-    <h2>এখনই আমাদের সাইট অর্ডার দিন!</h2>
-    <p>এডমিন প্যানেল থেকে আপনি সবকিছু খুব সহজে ইনশাআল্লাহ কন্ট্রোল করতে পারবেন।</p>
-    <p>সুতরাং, এটি অর্ডার দেওয়ার সঠিক সময়।</p>
-    
-   
-    
-    <p>ধন্যবাদ!</p>
-</div>
-
-    
+        <h1>আমাদের সাইটের বৈশিষ্ট্যসমূহ</h1>
+        <ul class="feature-list">
+            <li>১. সাইটে আপনি এডমিন প্যানেল থেকে সবকিছু পরিচালনা করতে পারবেন, সবকিছু পরিবর্তন করতে পারবেন।</li>
+            <li>২. এডমিন প্যানেল থেকে টাকা উত্তোলনের পরিমাণ পরিবর্তন করতে পারবেন।</li>
+            <li>৩. এডমিন প্যানেল থেকে কন্টাক্ট, সার্ভিস এবং আপনার যাবতীয় তথ্য আপডেট করতে পারবেন।</li>
+            <li>৪. এডমিন প্যানেল থেকে প্রত্যেক ইউজারের আইডিতে পরিবর্তন করতে পারবেন।</li>
+            <li>৫. সকলের একাউন্ট ব্যালেন্স পরিবর্তন করতে পারবেন।</li>
+            <li>৬. এডমিন প্যানেল থেকে অপশন বিকাশ, নগদ ইত্যাদি দিতে পারবেন।</li>
+        </ul>
+        <h2>এখনই আমাদের সাইট অর্ডার দিন!</h2>
+        <p>এডমিন প্যানেল থেকে আপনি সবকিছু খুব সহজে ইনশাআল্লাহ কন্ট্রোল করতে পারবেন।</p>
+        <p>সুতরাং, এটি অর্ডার দেওয়ার সঠিক সময়।</p>
+        <p>ধন্যবাদ!</p>
+    </div>
 </div>
 
 <script src="script.js"></script>
 </body>
 </html>
-
