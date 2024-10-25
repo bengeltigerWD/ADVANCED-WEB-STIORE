@@ -16,7 +16,7 @@
             color: #333;
         }
         /* Loading Screen Style */
-        .loading-screen {
+        #loading-screen {
             position: fixed;
             top: 0;
             left: 0;
@@ -29,19 +29,20 @@
             align-items: center;
             z-index: 9999;
         }
-        .loading-screen img {
+        #loading-screen img {
             width: 150px;
             height: auto;
             margin-bottom: 10px;
         }
-        .loading-screen h1 {
+        #loading-screen h1 {
             font-size: 24px;
             color: #333;
         }
-        /* Rest of the page styling */
-        .hidden {
+        /* Hidden Content */
+        #main-content {
             display: none;
         }
+        /* Header */
         .header {
             display: flex;
             align-items: center;
@@ -63,6 +64,7 @@
             text-decoration: none;
             font-size: 12px;
         }
+        /* Site Title & Search with Background */
         .site-background {
             background: linear-gradient(135deg, #1e3c72, #2a5298);
             padding: 20px 0;
@@ -103,6 +105,7 @@
             cursor: pointer;
             border-radius: 0 5px 5px 0;
         }
+        /* Category Section */
         .categories {
             text-align: center;
             margin: 20px 0;
@@ -129,6 +132,7 @@
         .category:hover {
             background-color: #f0f0f0;
         }
+        /* Product Cards */
         .products {
             display: flex;
             flex-wrap: wrap;
@@ -167,6 +171,7 @@
             border-radius: 4px;
             text-decoration: none;
         }
+        /* Footer */
         .footer {
             text-align: center;
             padding: 15px;
@@ -176,88 +181,92 @@
         }
     </style>
 </head>
-<body class="hidden">
+<body>
 
     <!-- Loading Screen -->
-    <div class="loading-screen">
-        <img src="youtoub.png" alt="Logo"> <!-- নিশ্চিত করুন লোগোটি সঠিক ফোল্ডারে আছে -->
+    <div id="loading-screen">
+        <img src="Ajmir.png" alt="Logo"> <!-- নিশ্চিত করুন ফাইল সঠিক ফোল্ডারে আছে -->
         <h1>Loading, please wait...</h1>
     </div>
 
-    <!-- Header -->
-    <header class="header">
-        <img src="Ajmir.png" alt="Logo">
-        <div class="nav-links">
-            <a href="#about">About Us</a>
-            <a href="#contact">Contact</a>
-            <a href="#office">Offi Site</a>
-        </div>
-    </header>
+    <!-- Main Content -->
+    <div id="main-content">
+        <!-- Header -->
+        <header class="header">
+            <img src="Ajmir.png" alt="Logo">
+            <div class="nav-links">
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact</a>
+                <a href="#office">Official Site</a>
+            </div>
+        </header>
 
-    <!-- Site Title & Search with Background -->
-    <section class="site-background">
-        <div class="site-title">
-            <h1>Smart Web Store</h1>
-            <p>Find the best websites at the best prices</p>
-        </div>
+        <!-- Site Title & Search with Background -->
+        <section class="site-background">
+            <div class="site-title">
+                <h1>Smart Web Store</h1>
+                <p>Find the best websites at the best prices</p>
+            </div>
 
-        <div class="search-container">
-            <input type="text" class="search-box" placeholder="Search for websites...">
-            <button class="search-button">Search</button>
-        </div>
-    </section>
+            <div class="search-container">
+                <input type="text" class="search-box" placeholder="Search for websites...">
+                <button class="search-button">Search</button>
+            </div>
+        </section>
 
-    <!-- Category Section -->
-    <section class="categories">
-        <h2>Our Categories</h2>
-        <div class="category-list">
-            <div class="category">E-commerce</div>
-            <div class="category">Portfolio</div>
-            <div class="category">Blogs</div>
-            <div class="category">Landing Pages</div>
-            <div class="category">Social Platforms</div>
-        </div>
-    </section>
+        <!-- Category Section -->
+        <section class="categories">
+            <h2>Our Categories</h2>
+            <div class="category-list">
+                <div class="category">E-commerce</div>
+                <div class="category">Portfolio</div>
+                <div class="category">Blogs</div>
+                <div class="category">Landing Pages</div>
+                <div class="category">Social Platforms</div>
+            </div>
+        </section>
 
-    <!-- Product Cards -->
-    <section class="products">
-        <div class="product-card">
-            <img src="Ajmir.png" alt="Product 1">
-            <h3>Product Name 1</h3>
-            <p>$19.99</p>
-            <a href="#" class="details-button">Details</a>
-        </div>
-        <div class="product-card">
-            <img src="space.jpg" alt="Product 2">
-            <h3>Product Name 2</h3>
-            <p>$29.99</p>
-            <a href="#" class="details-button">Details</a>
-        </div>
-        <div class="product-card">
-            <img src="Ajmir.png" alt="Product 3">
-            <h3>Product Name 3</h3>
-            <p>$24.99</p>
-            <a href="#" class="details-button">Details</a>
-        </div>
-        <div class="product-card">
-            <img src="Ajmir.Edit.JPG" alt="Product 4">
-            <h3>Product Name 4</h3>
-            <p>$39.99</p>
-            <a href="#" class="details-button">Details</a>
-        </div>
-    </section>
+        <!-- Product Cards -->
+        <section class="products">
+            <div class="product-card">
+                <img src="Ajmir.png" alt="Product 1">
+                <h3>Product Name 1</h3>
+                <p>$19.99</p>
+                <a href="#" class="details-button">Details</a>
+            </div>
+            <div class="product-card">
+                <img src="space.jpg" alt="Product 2">
+                <h3>Product Name 2</h3>
+                <p>$29.99</p>
+                <a href="#" class="details-button">Details</a>
+            </div>
+            <div class="product-card">
+                <img src="Ajmir.png" alt="Product 3">
+                <h3>Product Name 3</h3>
+                <p>$24.99</p>
+                <a href="#" class="details-button">Details</a>
+            </div>
+            <div class="product-card">
+                <img src="Ajmir.Edit.JPG" alt="Product 4">
+                <h3>Product Name 4</h3>
+                <p>$39.99</p>
+                <a href="#" class="details-button">Details</a>
+            </div>
+        </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        ALL RIGHTS RESERVED 2024
-    </footer>
+        <!-- Footer -->
+        <footer class="footer">
+            ALL RIGHTS RESERVED 2024
+        </footer>
+    </div>
 
     <script>
+        // Function to hide the loading screen and show the main content
         window.onload = function() {
             setTimeout(function() {
-                document.querySelector('.loading-screen').style.display = 'none';
-                document.body.classList.remove('hidden');
-            }, 2000);
+                document.getElementById('loading-screen').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+            }, 2000); // Loading screen duration in milliseconds
         };
     </script>
 
