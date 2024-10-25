@@ -1,1 +1,215 @@
-Product Name 1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Web Store</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Times New Roman", Times, serif;
+        }
+        body {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        /* Header */
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: black;
+            color: white;
+        }
+        .header img {
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+        }
+        .header .nav-links {
+            display: flex;
+            gap: 10px;
+        }
+        .header a {
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+        }
+        /* Site Title & Search */
+        .site-title {
+            text-align: center;
+            margin: 15px 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #4b6cb7, #182848);
+            color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .site-title h1 {
+            font-size: 24px;
+        }
+        .site-title p {
+            font-size: 14px;
+        }
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin: 15px 0;
+        }
+        .search-box, .search-button {
+            height: 35px;
+            font-size: 14px;
+            border-radius: 5px;
+        }
+        .search-box {
+            width: 70%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            background-color: #e9f1fb;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .search-button {
+            width: 20%;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        /* Image Slider */
+        .slider {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            height: 1.5in;
+            margin: 15px 0;
+        }
+        .slide-image {
+            width: 100%;
+            object-fit: cover;
+            animation: slide 20s infinite;
+        }
+        @keyframes slide {
+            0%, 20% { transform: translateX(0); }
+            25%, 45% { transform: translateX(-100%); }
+            50%, 70% { transform: translateX(-200%); }
+            75%, 95% { transform: translateX(-300%); }
+        }
+        /* Product Cards */
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            padding: 10px;
+        }
+        .product-card {
+            width: 45%;
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .product-card img {
+            width: 100%;
+            border-radius: 4px;
+        }
+        .product-card h3 {
+            font-size: 14px;
+            color: #333;
+            margin: 10px 0;
+        }
+        .product-card p {
+            font-size: 12px;
+            color: #555;
+            margin-bottom: 8px;
+        }
+        .product-card .details-button {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background-color: black;
+            color: white;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <img src="Ajmir.png" alt="Logo">
+        <div class="nav-links">
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+            <a href="#office">Offi Site</a>
+        </div>
+    </header>
+
+    <!-- Site Title & Search -->
+    <section class="site-title">
+        <h1>Advanced Web Store</h1>
+        <p>Buy Premium Website</p>
+    </section>
+
+    <div class="search-container">
+        <input type="text" class="search-box" placeholder="Search here...">
+        <button class="search-button">Search</button>
+    </div>
+
+    <!-- Image Slider -->
+    <div class="slider">
+        <img src="space.jpg" alt="Image 1" class="slide-image">
+        <img src="Ajmir.Edit.JPG" alt="Image 2" class="slide-image">
+        <img src="Ajmir.png" alt="Image 3" class="slide-image">
+        <img src="Ajmir.Edit.JPG" alt="Image 4" class="slide-image">
+        <img src="Ajmir.png" alt="Image 5" class="slide-image">
+    </div>
+
+    <!-- Product Cards -->
+    <section class="products">
+        <div class="product-card">
+            <img src="Ajmir.png" alt="Product 1">
+            <h3>Product Name 1</h3>
+            <p>$19.99</p>
+            <a href="#" class="details-button">Details</a>
+        </div>
+        <div class="product-card">
+            <img src="space.jpg" alt="Product 2">
+            <h3>Product Name 2</h3>
+            <p>$29.99</p>
+            <a href="#" class="details-button">Details</a>
+        </div>
+        <div class="product-card">
+            <img src="Ajmir.png" alt="Product 3">
+            <h3>Product Name 3</h3>
+            <p>$24.99</p>
+            <a href="#" class="details-button">Details</a>
+        </div>
+        <div class="product-card">
+            <img src="Ajmir.Edit.JPG" alt="Product 4">
+            <h3>Product Name 4</h3>
+            <p>$39.99</p>
+            <a href="#" class="details-button">Details</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        ALL RIGHTS RESERVED 2024
+    </footer>
+
+</body>
+</html>
