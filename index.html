@@ -24,22 +24,24 @@
             height: 100%;
             background-color: #ffffff;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            z-index: 9999; /* Ensure it is on top */
+            z-index: 9999;
         }
-
         .loading-screen img {
-            width: 150px; /* Adjust width as needed */
-            height: auto; /* Maintain aspect ratio */
+            width: 150px;
+            height: auto;
+            margin-bottom: 10px;
         }
-
         .loading-screen h1 {
             font-size: 24px;
             color: #333;
         }
-
-        /* Header */
+        /* Rest of the page styling */
+        .hidden {
+            display: none;
+        }
         .header {
             display: flex;
             align-items: center;
@@ -61,9 +63,8 @@
             text-decoration: none;
             font-size: 12px;
         }
-        /* Site Title & Search with Background */
         .site-background {
-            background: linear-gradient(135deg, #1e3c72, #2a5298); /* Smart gradient background */
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
             padding: 20px 0;
             text-align: center;
             color: #fff;
@@ -102,24 +103,20 @@
             cursor: pointer;
             border-radius: 0 5px 5px 0;
         }
-        /* Category Section */
         .categories {
             text-align: center;
             margin: 20px 0;
         }
-
         .categories h2 {
             font-size: 18px;
             color: #333;
             margin-bottom: 10px;
         }
-
         .category-list {
             display: flex;
             justify-content: center;
             gap: 15px;
         }
-
         .category {
             padding: 8px 12px;
             color: #333;
@@ -129,12 +126,9 @@
             cursor: pointer;
             transition: background-color 0.3s;
         }
-
         .category:hover {
             background-color: #f0f0f0;
         }
-
-        /* Product Cards */
         .products {
             display: flex;
             flex-wrap: wrap;
@@ -173,7 +167,6 @@
             border-radius: 4px;
             text-decoration: none;
         }
-        /* Footer */
         .footer {
             text-align: center;
             padding: 15px;
@@ -181,18 +174,13 @@
             color: white;
             font-size: 12px;
         }
-
-        /* Hide content initially */
-        .hidden {
-            display: none;
-        }
     </style>
 </head>
 <body class="hidden">
 
     <!-- Loading Screen -->
     <div class="loading-screen">
-        <img src="Ajmir.png" alt="Logo"> <!-- Your logo -->
+        <img src="Ajmir.png" alt="Logo"> <!-- নিশ্চিত করুন লোগোটি সঠিক ফোল্ডারে আছে -->
         <h1>Loading, please wait...</h1>
     </div>
 
@@ -265,13 +253,13 @@
     </footer>
 
     <script>
-        // JavaScript for loading screen
         window.onload = function() {
             setTimeout(function() {
-                document.querySelector('.loading-screen').style.display = 'none'; // Hide loading screen
-                document.body.classList.remove('hidden'); // Show body content
-            }, 2000); // Wait for 2 seconds
+                document.querySelector('.loading-screen').style.display = 'none';
+                document.body.classList.remove('hidden');
+            }, 2000);
         };
     </script>
+
 </body>
 </html>
