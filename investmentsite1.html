@@ -55,19 +55,44 @@
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
         }
 
-        /* Slideshow Arrows */
-        .slideshow-container .prev, .slideshow-container .next {
-            color: #fff;
-            font-size: 28px;
-            padding: 12px;
-            border-radius: 50%;
-            background: rgba(0, 0, 0, 0.5);
-            transition: background 0.3s;
+       /* Slideshow Styling */
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
         }
 
-        .slideshow-container .prev:hover, .slideshow-container .next:hover {
-            background: rgba(0, 0, 0, 0.7);
+        .slides {
+            display: none;
         }
+
+        /* Slide Navigation Buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            transition: background-color 0.3s;
+        }
+
+        .prev {
+            left: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
 
         /* Description Box */
         .description-box {
