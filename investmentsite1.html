@@ -6,108 +6,110 @@
     <title>Advanced Web Store</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Premium Design for a Modern Feel */
+        /* Modern & Fresh Style */
 
         /* Background Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f2f5f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Site Title */
         .site-background {
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            padding: 40px 0;
+            background: linear-gradient(145deg, #3b6978, #204051);
+            padding: 30px 0;
             text-align: center;
             color: #fff;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
 
-        /* Site Title */
         .site-title {
-            background-color: #1c3f64;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            background-color:#FFFFFF;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
         }
 
-        /* Button Styling */
-        .buy-now-button {
-            background-color: #ff9800;
+        /* Buttons */
+        .buy-now-button, .navigation-buttons button {
+            background-color: #000FF;
             color: white;
-            border: none;
-            padding: 12px 24px;
-            font-size: 18px;
+            padding: 14px 28px;
+            font-size: 16px;
             font-weight: bold;
+            border: none;
+            border-radius: 10px;
             cursor: pointer;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            margin: 10px;
+            text-decoration: none;
+            display: inline-block;
         }
 
-        /* Hover Effect */
-        .buy-now-button:hover {
-            background-color: #e68900;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        .buy-now-button:hover, .navigation-buttons button:hover {
+            background-color: #d87d00;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
         }
 
         /* Slideshow Arrows */
-        .slideshow-container .prev,
-        .slideshow-container .next {
+        .slideshow-container .prev, .slideshow-container .next {
             color: #fff;
-            font-size: 30px;
+            font-size: 28px;
             padding: 12px;
             border-radius: 50%;
-            background: rgba(0, 0, 0, 0.4);
+            background: rgba(0, 0, 0, 0.5);
             transition: background 0.3s;
         }
 
-        .slideshow-container .prev:hover,
-        .slideshow-container .next:hover {
-            background: rgba(0, 0, 0, 0.6);
+        .slideshow-container .prev:hover, .slideshow-container .next:hover {
+            background: rgba(0, 0, 0, 0.7);
         }
 
         /* Description Box */
         .description-box {
-            background-color: #f9f9f9;
-            border-radius: 10px;
-            padding: 25px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 20px;
             margin-top: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            text-align: left;
-            color: #333;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
         }
 
         .feature-list {
             list-style-type: square;
             padding-left: 20px;
-            margin-top: 10px;
+            margin: 15px 0;
+            color: #333;
         }
 
-        /* Text Styling */
         h1, h2 {
-            color: #1e3c72;
+            color: #1c3e67;
             font-family: 'Arial', sans-serif;
         }
 
         p {
             font-family: 'Arial', sans-serif;
-            font-size: 16px;
-            color: #555;
+            font-size: 15px;
+            color: #444;
+        }
+        
+        /* Container */
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
         }
 
-        /* Navigation Buttons */
-        .navigation-buttons button {
-            padding: 10px 20px;
-            background-color: #1e3c72;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: bold;
-            margin: 10px 5px;
-            transition: all 0.3s;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+        /* Image Styling */
+        .slides img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
         }
 
-        .navigation-buttons button:hover {
-            background-color: #2a5298;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-        }
     </style>
 </head>
 <body>
@@ -119,59 +121,50 @@
     </div>
 </section>
 
-<!-- Back and Home Buttons -->
 <div class="navigation-buttons">
     <a href="index.html"><button>Home</button></a>
 </div>
 
 <div class="container">
-    <!-- Slide Show -->
     <div class="slideshow-container">
         <div class="slides fade">
-            <img src="photo 1.jpg" alt="Image 1" style="width:100%; border-radius: 10px;">
+            <img src="photo 1.jpg" alt="Image 1">
         </div>
         <div class="slides fade">
-            <img src="photo 2.jpg" alt="Image 2" style="width:100%; border-radius: 10px;">
+            <img src="photo 2.jpg" alt="Image 2">
         </div>
         <div class="slides fade">
-            <img src="photo_2024-10-25_17-59-48.jpg" alt="Image 3" style="width:100%; border-radius: 10px;">
+            <img src="photo_2024-10-25_17-59-48.jpg" alt="Image 3">
         </div>
         <div class="slides fade">
-            <img src="photo_2024-10-25_17-59-52.jpg" alt="Image 4" style="width:100%; border-radius: 10px;">
+            <img src="photo_2024-10-25_17-59-52.jpg" alt="Image 4">
         </div>
         <div class="slides fade">
-            <img src="photo_2024-10-25_17-59-59.jpg" alt="Image 5" style="width:100%; border-radius: 10px;">
+            <img src="photo_2024-10-25_17-59-59.jpg" alt="Image 5">
         </div>
-
-        <!-- Next and previous buttons -->
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
 
-    <!-- Website Details -->
-    <h2 id="website-name">New design Investment site</h2>
+    <h2 id="website-name">New Design Investment Site</h2>
     <p id="website-price">Price: ৳1550 (25% off)</p>
     <p id="website-code">Website Code o10101</p>
-    <!-- Buy Now Button -->
     <a href="order.html" class="buy-now-button">Buy Now</a>
 
-    <!-- Description Box -->
     <div class="description-box">
         <h1>আমাদের সাইটের বৈশিষ্ট্যসমূহ</h1>
         <ul class="feature-list">
-            <li>১. সাইটে আপনি এডমিন প্যানেল থেকে সবকিছু পরিচালনা করতে পারবেন, সবকিছু পরিবর্তন করতে পারবেন।</li>
-            <li>২. এডমিন প্যানেল থেকে টাকা উত্তোলনের পরিমাণ পরিবর্তন করতে পারবেন।</li>
-            <li>৩. এডমিন প্যানেল থেকে কন্টাক্ট, সার্ভিস এবং আপনার যাবতীয় তথ্য আপডেট করতে পারবেন।</li>
-            <li>৪. এডমিন প্যানেল থেকে প্রত্যেক ইউজারের আইডিতে পরিবর্তন করতে পারবেন।</li>
-            <li>৫. সকলের একাউন্ট ব্যালেন্স পরিবর্তন করতে পারবেন।</li>
-            <li>৬. এডমিন প্যানেল থেকে অপশন বিকাশ, নগদ ইত্যাদি দিতে পারবেন।</li>
-              <li>৭.এছাড়া একটি ইনভেসমেন্ট সাইটে রেফার লগইন পেজ সহ যে যেই বিষয় থাকে সবগুলোই পাচ্ছেন আমাদের এই সাইটে</li>
-            <li>৮ এছাড়া প্রতিনিয়ত আপনার ইচ্ছামত টাস্ক এড করতে পারবেন  </li>
+            <li>১. এডমিন প্যানেল থেকে সবকিছু পরিচালনা করতে পারবেন।</li>
+            <li>২. টাকা উত্তোলনের পরিমাণ পরিবর্তন করতে পারবেন।</li>
+            <li>৩. এডমিন প্যানেল থেকে তথ্য আপডেট করতে পারবেন।</li>
+            <li>৪. প্রত্যেক ইউজারের আইডিতে পরিবর্তন করতে পারবেন।</li>
+            <li>৫. একাউন্ট ব্যালেন্স পরিবর্তন করতে পারবেন।</li>
+            <li>৬. বিকাশ, নগদ ইত্যাদি সেট করতে পারবেন।</li>
+            <li>৭. রেফার লগইন পেজসহ সব ফিচার।</li>
+            <li>৮. নতুন টাস্ক যোগ করতে পারবেন।</li>
         </ul>
-        <h2>এখনই আমাদের সাইট অর্ডার দিন!</h2>
-        <p>এডমিন প্যানেল থেকে আপনি সবকিছু খুব সহজে ইনশাআল্লাহ কন্ট্রোল করতে পারবেন।</p>
-        <p>সুতরাং, এটি অর্ডার দেওয়ার সঠিক সময়।</p>
-        <p>ধন্যবাদ!</p>
+        <h2>এখনই অর্ডার করুন!</h2>
+        <p>এডমিন প্যানেল থেকে সবকিছু নিয়ন্ত্রণ করতে পারবেন। ধন্যবাদ!</p>
     </div>
 </div>
 
