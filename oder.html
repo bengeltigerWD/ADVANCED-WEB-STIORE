@@ -129,6 +129,8 @@
         <label for="transaction-number">ট্রানজেকশন নম্বর:</label>
         <input type="text" id="transaction-number" name="transaction-number" required>
         <div class="instructions">উদাহরণ: TrxID 5H75YN2YON /div>
+             <label for="promo-code">প্রোমো কোড (ঐচ্ছিক):</label>
+        <input type="text" id="promo-code" name="promo-code" placeholder="প্রোমো কোড প্রবেশ করান">
 
         <button type="button" class="confirm-button" onclick="submitForm()">অর্ডার নিশ্চিত করুন</button>
         <button type="button" class="back-button" onclick="goBack()">ফিরে যান</button> <!-- Back Button -->
@@ -146,6 +148,7 @@
         var websiteCode = document.getElementById('website-code').value;
         var bkashNagad = document.getElementById('bkash-nagad').value;
         var transactionNumber = document.getElementById('transaction-number').value;
+        var promoCode = document.getElementById('promo-code').value;
 
         // Prepare the email body
         var emailBody = `
@@ -155,6 +158,7 @@
             ইমেইল: ${email}\n
             ওয়েবসাইটের নাম: ${websiteName}\n
             ওয়েবসাইট কোড: ${websiteCode}\n
+             প্রোমো কোড: ${promoCode}\n
             বিকাশ / নগদ নম্বর: ${bkashNagad}\n
             লেনদেন নম্বর: ${transactionNumber}
         `;
