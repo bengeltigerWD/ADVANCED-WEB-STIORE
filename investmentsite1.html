@@ -6,35 +6,107 @@
     <title>Advanced Web Store</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        /* Premium Design for a Modern Feel */
+
+        /* Background Styling */
         .site-background {
             background: linear-gradient(135deg, #1e3c72, #2a5298);
-            padding: 20px 0;
+            padding: 40px 0;
             text-align: center;
             color: #fff;
         }
 
+        /* Site Title */
         .site-title {
-            background-color: blue; /* নীল ব্যাকগ্রাউন্ড যোগ করা */
-            padding: 10px; /* কিছু প্যাডিং যোগ করা */
+            background-color: #1c3f64;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
+        /* Button Styling */
         .buy-now-button {
-            background-color: #4CAF50; /* সবুজ ব্যাকগ্রাউন্ড */
-            color: white; /* সাদা টেক্সট */
-            border: none; /* কোন বর্ডার নেই */
-            padding: 10px 20px; /* উপরে/নিচে এবং বামে/ডানে প্যাডিং */
-            text-align: center; /* টেক্সট সেন্টার */
-            text-decoration: none; /* আন্ডারলাইন সরিয়ে ফেলা */
-            display: inline-block; /* ইনলাইন বানানো */
-            font-size: 16px; /* ফন্ট সাইজ */
-            margin: 10px 2px; /* মার্জিন */
-            cursor: pointer; /* হোভার করার সময় পয়েন্টার কার্সর */
-            border-radius: 5px; /* গোলাকার কোণ */
-            transition: background-color 0.3s ease; /* স্মুথ ট্রানজিশন */
+            background-color: #ff9800;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
 
+        /* Hover Effect */
         .buy-now-button:hover {
-            background-color: #45a049; /* হোভার করার সময় গা darker  সবুজ */
+            background-color: #e68900;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Slideshow Arrows */
+        .slideshow-container .prev,
+        .slideshow-container .next {
+            color: #fff;
+            font-size: 30px;
+            padding: 12px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.4);
+            transition: background 0.3s;
+        }
+
+        .slideshow-container .prev:hover,
+        .slideshow-container .next:hover {
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        /* Description Box */
+        .description-box {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 25px;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            color: #333;
+        }
+
+        .feature-list {
+            list-style-type: square;
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        /* Text Styling */
+        h1, h2 {
+            color: #1e3c72;
+            font-family: 'Arial', sans-serif;
+        }
+
+        p {
+            font-family: 'Arial', sans-serif;
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Navigation Buttons */
+        .navigation-buttons button {
+            padding: 10px 20px;
+            background-color: #1e3c72;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            margin: 10px 5px;
+            transition: all 0.3s;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        .navigation-buttons button:hover {
+            background-color: #2a5298;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
@@ -56,19 +128,19 @@
     <!-- Slide Show -->
     <div class="slideshow-container">
         <div class="slides fade">
-            <img src="photo 1.jpg" alt="Image 1" style="width:100%">
+            <img src="photo 1.jpg" alt="Image 1" style="width:100%; border-radius: 10px;">
         </div>
         <div class="slides fade">
-            <img src="photo 2.jpg" alt="Image 2" style="width:100%">
+            <img src="photo 2.jpg" alt="Image 2" style="width:100%; border-radius: 10px;">
         </div>
         <div class="slides fade">
-            <img src="photo_2024-10-25_17-59-48.jpg" alt="Image 3" style="width:100%">
+            <img src="photo_2024-10-25_17-59-48.jpg" alt="Image 3" style="width:100%; border-radius: 10px;">
         </div>
         <div class="slides fade">
-            <img src="photo_2024-10-25_17-59-52.jpg" alt="Image 4" style="width:100%">
+            <img src="photo_2024-10-25_17-59-52.jpg" alt="Image 4" style="width:100%; border-radius: 10px;">
         </div>
         <div class="slides fade">
-            <img src="photo_2024-10-25_17-59-59.jpg" alt="Image 5" style="width:100%">
+            <img src="photo_2024-10-25_17-59-59.jpg" alt="Image 5" style="width:100%; border-radius: 10px;">
         </div>
 
         <!-- Next and previous buttons -->
@@ -81,7 +153,7 @@
     <p id="website-price">Price: ৳1550 (25% off)</p>
     <p id="website-code">Website Code o10101</p>
     <!-- Buy Now Button -->
-    <a href="oder.html" class="buy-now-button">Buy Now</a> <!-- লিংক যুক্ত করা হয়েছে -->
+    <a href="order.html" class="buy-now-button">Buy Now</a>
 
     <!-- Description Box -->
     <div class="description-box">
@@ -93,6 +165,8 @@
             <li>৪. এডমিন প্যানেল থেকে প্রত্যেক ইউজারের আইডিতে পরিবর্তন করতে পারবেন।</li>
             <li>৫. সকলের একাউন্ট ব্যালেন্স পরিবর্তন করতে পারবেন।</li>
             <li>৬. এডমিন প্যানেল থেকে অপশন বিকাশ, নগদ ইত্যাদি দিতে পারবেন।</li>
+              <li>৭.এছাড়া একটি ইনভেসমেন্ট সাইটে রেফার লগইন পেজ সহ যে যেই বিষয় থাকে সবগুলোই পাচ্ছেন আমাদের এই সাইটে</li>
+            <li>৮ এছাড়া প্রতিনিয়ত আপনার ইচ্ছামত টাস্ক এড করতে পারবেন  </li>
         </ul>
         <h2>এখনই আমাদের সাইট অর্ডার দিন!</h2>
         <p>এডমিন প্যানেল থেকে আপনি সবকিছু খুব সহজে ইনশাআল্লাহ কন্ট্রোল করতে পারবেন।</p>
