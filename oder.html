@@ -7,81 +7,67 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            font-family: 'Times New Roman', serif; /* Font */
-            background-color: #ffffff; /* White background */
-            color: #333; /* Text color */
-            margin: 0; /* Remove default margin */
-            padding: 0; /* Remove default padding */
+            font-family: 'Times New Roman', serif;
+            background-color: #ffffff;
+            color: #333;
+            margin: 0;
+            padding: 0;
         }
         .container {
-            max-width: 600px; /* Maximum width for desktop */
-            margin: auto; /* Center the container */
-            padding: 20px; /* Padding inside container */
-            border-radius: 8px; /* Rounded corners */
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
         h1 {
-            text-align: center; /* Center align */
-            background-color: #3498db; /* Blue background */
-            color: white; /* White text color */
-            padding: 10px; /* Padding for site name */
-            border-radius: 5px; /* Rounded corners */
-            margin: 0; /* Remove default margin */
+            text-align: center;
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 0;
         }
         .instructions {
-            font-size: 14px; /* Font size for instructions */
-            color: #888; /* Instructions text color */
-            margin: 10px 0; /* Margin for instructions */
-            text-align: center; /* Center align */
+            font-size: 14px;
+            color: #888;
+            margin: 10px 0;
+            text-align: center;
         }
         label {
-            font-size: 18px; /* Font size for labels */
-            display: block; /* Block display */
-            margin: 10px 0 5px; /* Margin for labels */
+            font-size: 18px;
+            display: block;
+            margin: 10px 0 5px;
         }
         input[type="text"], input[type="email"], input[type="number"] {
-            width: 100%; /* Full width inputs */
-            padding: 10px; /* Padding for inputs */
-            margin: 5px 0 10px; /* Margin for inputs */
-            border: 1px solid #ccc; /* Border color */
-            border-radius: 5px; /* Rounded corners */
-            box-sizing: border-box; /* Include padding and border in element's total width */
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .confirm-button, .back-button {
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            width: 100%;
+            margin-top: 10px;
         }
         .confirm-button {
-            background-color: #e74c3c; /* Button background color */
-            color: white; /* Button text color */
-            padding: 10px 20px; /* Padding for button */
-            border: none; /* Remove border */
-            border-radius: 5px; /* Rounded corners */
-            cursor: pointer; /* Pointer cursor on hover */
-            font-size: 18px; /* Font size for button */
-            width: 100%; /* Full width button */
-            margin-top: 10px; /* Margin above button */
+            background-color: #e74c3c;
         }
         .back-button {
-            background-color: #3498db; /* Button background color */
-            color: white; /* Button text color */
-            padding: 10px 20px; /* Padding for button */
-            border: none; /* Remove border */
-            border-radius: 5px; /* Rounded corners */
-            cursor: pointer; /* Pointer cursor on hover */
-            font-size: 18px; /* Font size for button */
-            width: 100%; /* Full width button */
-            margin-top: 10px; /* Margin above button */
+            background-color: #3498db;
         }
         @media (max-width: 600px) {
-            h1 {
-                font-size: 24px; /* Smaller font size for mobile */
-            }
-            label {
-                font-size: 16px; /* Smaller font size for labels */
-            }
-            .instructions {
-                font-size: 12px; /* Smaller font size for instructions */
-            }
-            .confirm-button, .back-button {
-                font-size: 16px; /* Smaller font size for button */
-            }
+            h1 { font-size: 24px; }
+            label { font-size: 16px; }
+            .instructions { font-size: 12px; }
+            .confirm-button, .back-button { font-size: 16px; }
         }
     </style>
 </head>
@@ -91,15 +77,15 @@
     <h1>Advanced Webstore</h1>
     
     <div class="instructions">
-        <p>আপনার অর্ডার নিশ্চিত করার জন্য নিচের ফর্ম পূরণ করুন></p>
-        <p>আমাদের কাছে ইমেইল যাবে।><br>আমার ইমেইল দিয়ে আপনার অর্ডার কনফর্ম করবো।><br>তারপর আপনাকে WhatsApp এ মেসেজ দিবো এবং ইমেইল দিবো যে আপনার অর্ডার কনফর্ম হয়েছে।><br>তারপর ২-৫ ঘণ্টার মধ্যে সাইট পাবেন ইনশাআল্লাহ।।।।</p>
+        <p>আপনার অর্ডার নিশ্চিত করার জন্য নিচের ফর্ম পূরণ করুন</p>
+        <p>আমাদের কাছে ইমেইল যাবে। আমাদের ইমেইল দিয়ে আপনার অর্ডার কনফর্ম করবো। তারপর আপনাকে WhatsApp এ মেসেজ ও ইমেইল পাঠানো হবে যে আপনার অর্ডার কনফর্ম হয়েছে।</p>
         <p>যেকোনো সমস্যায় <a href="contact.html" style="color: blue;">যোগাযোগ করুন</a></p>
     </div>
     
     <form id="orderForm">
         <label for="name">নাম:</label>
         <input type="text" id="name" name="name" required>
-        <div class="instructions">উদাহরণ:আপনার নাম </div>
+        <div class="instructions">উদাহরণ: আপনার নাম</div>
 
         <label for="whatsapp">আপনার WhatsApp নম্বর:</label>
         <input type="text" id="whatsapp" name="whatsapp" required>
@@ -115,12 +101,17 @@
 
         <label for="website-name">ওয়েবসাইটের নাম:</label>
         <input type="text" id="website-name" name="website-name" required>
-        <div class="instructions">উদাহরণ: যেই ওয়েবসাইট কিনবেন(আগের পৃষ্ঠায় দেখুন)</div>
+        <div class="instructions">উদাহরণ: যেই ওয়েবসাইট কিনবেন (আগের পৃষ্ঠায় দেখুন)</div>
 
         <label for="website-code">ওয়েবসাইট কোড:</label>
         <input type="text" id="website-code" name="website-code" required>
-        <div class="instructions">উদাহরণ:101011(আগের পৃষ্ঠায় দেখুন) </div>
-         <label for="Send Money">আমাদের বিকাশ নম্বর: 01938954599, নগদ নম্বর: 01938954599 (এটাই টাকা পাঠাবেন) </label>
+        <div class="instructions">উদাহরণ: 101011 (আগের পৃষ্ঠায় দেখুন)</div>
+
+        <label for="site-name">সাইটের নাম:</label>
+        <input type="text" id="site-name" name="site-name" required>
+        <div class="instructions">উদাহরণ: আপনি আপনার সাইটের জন্য পছন্দের নাম দিন। ( যা পরে পরিবর্তন সম্ভব নয়)</div>
+
+        <label for="Send Money">আমাদের বিকাশ নম্বর: 01938954599, নগদ নম্বর: 01938954599 (এটাই টাকা পাঠাবেন)</label>
 
         <label for="bkash-nagad">আপনার বিকাশ / নগদ নম্বর:</label>
         <input type="text" id="bkash-nagad" name="bkash-nagad" required>
@@ -128,17 +119,27 @@
 
         <label for="transaction-number">ট্রানজেকশন নম্বর:</label>
         <input type="text" id="transaction-number" name="transaction-number" required>
-        <div class="instructions">উদাহরণ: TrxID 5H75YN2YON /div>
-             <label for="promo-code">প্রোমো কোড (ঐচ্ছিক):</label>
-        <input type="text" id="promo-code" name="promo-code" placeholder="প্রোমো কোড প্রবেশ করান">
+        <div class="instructions">উদাহরণ: TrxID 5H75YN2YON</div>
+
+        <label for="promo-code">প্রোমো কোড (ঐচ্ছিক):</label>
+        <input type="text" id="promo-code" name="promo-code" placeholder="প্রোমো কোড প্রবেশ করান(থাকলে দিবেন না থাকলে এড়িয়ে যাবেন)">
 
         <button type="button" class="confirm-button" onclick="submitForm()">অর্ডার নিশ্চিত করুন</button>
-        <button type="button" class="back-button" onclick="goBack()">ফিরে যান</button> <!-- Back Button -->
+        <button type="button" class="back-button" onclick="goBack()">ফিরে যান</button>
     </form>
 </div>
 
 <script>
     function submitForm() {
+        // Validate required fields
+        const requiredFields = ['name', 'whatsapp', 'mobile', 'email', 'website-name', 'website-code', 'site-name', 'bkash-nagad', 'transaction-number'];
+        for (const field of requiredFields) {
+            if (document.getElementById(field).value === '') {
+                alert('দয়া করে সব বাধ্যতামূলক ঘর পূরণ করুন।');
+                return;
+            }
+        }
+
         // Form data collection
         var name = document.getElementById('name').value;
         var whatsapp = document.getElementById('whatsapp').value;
@@ -146,6 +147,7 @@
         var email = document.getElementById('email').value;
         var websiteName = document.getElementById('website-name').value;
         var websiteCode = document.getElementById('website-code').value;
+        var siteName = document.getElementById('site-name').value;
         var bkashNagad = document.getElementById('bkash-nagad').value;
         var transactionNumber = document.getElementById('transaction-number').value;
         var promoCode = document.getElementById('promo-code').value;
@@ -158,20 +160,21 @@
             ইমেইল: ${email}\n
             ওয়েবসাইটের নাম: ${websiteName}\n
             ওয়েবসাইট কোড: ${websiteCode}\n
-             প্রোমো কোড: ${promoCode}\n
+            সাইটের নাম: ${siteName}\n
             বিকাশ / নগদ নম্বর: ${bkashNagad}\n
-            লেনদেন নম্বর: ${transactionNumber}
+            লেনদেন নম্বর: ${transactionNumber}\n
+            প্রোমো কোড: ${promoCode}
         `;
 
-        // Sending email via mailto link (this will open the default email client)
+        // Send email via mailto link
         window.location.href = `mailto:ajmirahemed75@gmail.com?subject=Website Order Confirmation&body=${encodeURIComponent(emailBody)}`;
 
-        // Optionally, reset the form
+        // Reset form
         document.getElementById('orderForm').reset();
     }
 
     function goBack() {
-        window.history.back(); // Go back to the previous page
+        window.history.back();
     }
 </script>
 
