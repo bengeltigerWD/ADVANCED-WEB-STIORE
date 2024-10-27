@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Web Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Modern & Fresh Style */
+
+        /* Background Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f2f5f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Site Title */
+        .site-background {
+            background: linear-gradient(145deg, #3b6978, #204051);
+            padding: 30px 0;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .site-title {
+            background-color:#FFFFFF;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Buttons */
+        .buy-now-button, .navigation-buttons button {
+            background-color: #0000FF;
+            color: white;
+            padding: 14px 28px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            margin: 10px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .buy-now-button:hover, .navigation-buttons button:hover {
+            background-color: #0000FF;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
+        }
+
+       /* Slideshow Styling */
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .slides {
+            display: none;
+        }
+
+        /* Slide Navigation Buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: Black;
+            font-weight: bold;
+            font-size: 24px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            transition: background-color 0.3s;
+        }
+
+        .prev {
+            left: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+
+        /* Description Box */
+        .description-box {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-list {
+            list-style-type: square;
+            padding-left: 20px;
+            margin: 15px 0;
+            color: #333;
+        }
+
+        h1, h2 {
+            color: #1c3e67;
+            font-family: 'Arial', sans-serif;
+        }
+
+        p {
+            font-family: 'Arial', sans-serif;
+            font-size: 15px;
+            color: #444;
+        }
+        
+        /* Container */
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Image Styling */
+        .slides img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+        }
+
+    </style>
+</head>
+<body>
+
+<section class="site-background">
+    <div class="site-title">
+        <h1>Advanced Web Store</h1>
+        <p>Find the best websites at the best prices</p>
+    </div>
+</section>
+
+<div class="navigation-buttons">
+    <a href="index.html"><button>Home</button></a>
+</div>
+
+<div class="container">
+    <div class="slideshow-container">
+        <div class="slides fade">
+            <img src="photo_2024-10-25_18-13-08" alt="Image 1">
+        </div>
+        <div class="slides fade">
+            <img src="photo_2024-10-25_18-13-22.jpg" alt="Image 2">
+        </div>
+        <div class="slides fade">
+            <img src="photo_2024-10-25_18-13-25.jpg" alt="Image 3">
+        </div>
+        <div class="slides fade">
+            <img src="photo_2024-10-25_18-13-27.jpg" alt="Image 4">
+        </div>
+        <div class="slides fade">
+            <img src="photo_2024-10-25_18-13-30.jpg" alt="Image 5">
+        </div>
+ <div class="slides fade">
+            <img src="photo_2024-10-25_18-13-33.jpg" alt="Image 6">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <h2 id="website-name">Advanced Betting Investment Website</h2>
+    <p id="website-price">Price:৳18000 (20%off)</p>
+    <p id="website-code">Website Code:010109</p>
+    <a href="oder.html" class="buy-now-button">Buy Now</a>
+
+    <div class="description-box">
+        <h1>Advanced Betting Investment সাইটের বৈশিষ্ট্যসমূহ</h1>
+        <ul class="feature-list">
+         <li>১. এডমিন প্যানেল থেকে সবকিছু পরিচালনা করতে পারবেন।</li>
+            <li>২. টাকা উত্তোলনের পরিমাণ পরিবর্তন করতে পারবেন।</li>
+            <li>৩. এডমিন প্যানেল থেকে তথ্য আপডেট করতে পারবেন।</li>
+            <li>৪. প্রত্যেক ইউজারের আইডিতে পরিবর্তন করতে পারবেন।</li>
+            <li>৫. একাউন্ট ব্যালেন্স পরিবর্তন করতে পারবেন।</li>
+            <li>৬. বিকাশ, নগদ ইত্যাদি সেট করতে পারবেন।</li>
+            <li>৭. রেফার লগইন পেজসহ সব ফিচার।</li>
+            <li>  ৮.বেটিং গেম যোগ করতে পারবেন নিজের ইচ্ছা মত। </li>
+            <li>৯.নিজের ইচ্ছা মত বেটিং গেম এর পরিবর্তন করতে পারবেন ।  </li>
+            <li>১০.যাবতীয় সকল বিষয় এই সাইটে পেয়ে যাবেন এবং এডমিন প্যানেল থেকে সবকিছু কন্ট্রোল করতে পারবেন ।  </li>
+            <li>১১. এছাড়া থাকছে ৪০টির বেশি ফিচার।  </li>
+               </ul>
+    
+        <p>এডমিন প্যানেল থেকে সবকিছু নিয়ন্ত্রণ করতে পারবেন। ধন্যবাদ!</p>
+    <h2>এখনই অর্ডার করুন!</h2>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
