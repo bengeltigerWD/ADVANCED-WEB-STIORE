@@ -34,35 +34,36 @@
             font-size: 18px;
             color: #555;
         }
+        .button-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .button-container a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .back-button {
+            background-color: #007bff;
+        }
+        .home-button {
+            background-color: #28a745;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <img src="coming-soon.png" alt="Coming Soon">
         <p class="message">We’re launching something exciting. Stay tuned!</p>
+        <div class="button-container">
+            <a href="javascript:history.back()" class="back-button">Back</a>
+            <a href="index.html" class="home-button">Home</a>
+        </div>
     </div>
 </body>
 </html>
-
-<div style="text-align: center; margin: 20px 0;">
-    <a href="javascript:history.back()" class="back-button" style="
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #007bff;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        font-size: 14px;
-        margin-right: 10px;
-    ">Back</a>
-    
-    <a href="index.html" class="home-button" style="
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #28a745;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        font-size: 14px;
-    ">Home</a>
-</div>
