@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Web Store</title>  
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Times New Roman", Times, serif;
+        }
+        body {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        /* Loading Screen Style */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        #loading-screen img {
+            width: 200px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        #loading-screen h1 {
+            font-size: 24px;
+            color: #333;
+        }
+        /* Hidden Content */
+        #main-content {
+            display: none;
+        }
+        /* Header */
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: black;
+            color: white;
+        }
+        .header img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+        .header .nav-links {
+            display: flex;
+            gap: 10px;
+        }
+        .header a {
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+        }
+        /* Site Title & Search with Background */
+        .site-background {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            padding: 20px 0;
+            text-align: center;
+            color: #fff;
+        }
+        .site-title h1 {
+            font-size: 24px;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+        .site-title p {
+            font-size: 14px;
+            color: #e0e0e0;
+        }
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin: 15px 0;
+        }
+        .search-box, .search-button {
+            height: 36px;
+            font-size: 14px;
+        }
+        .search-box {
+            width: 70%;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px 0 0 5px;
+            background-color: #ffffff;
+            color: #333;
+        }
+        .search-button {
+            width: 20%;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 0 5px 5px 0;
+        }
+        /* Slideshow */
+        .slideshow {
+            width: 100%;
+            max-width: 500px;
+            height: 200px;
+            margin: 20px auto;
+            overflow: hidden;
+            position: relative;
+            border-radius: 5px;
+        }
+        .slideshow img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+        .slideshow img.active {
+            opacity: 1;
+        }
+        /* Category Section */
+        .categories {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .categories h2 {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .category-list {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .category {
+            padding: 8px 12px;
+            color: #333;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .category:hover {
+            background-color: #f0f0f0;
+        }
+        /* Product Cards */
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            padding: 10px;
+        }
+        .product-card {
+            width: 45%;
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .product-card img {
+            width: 100%;
+            border-radius: 4px;
+        }
+        .product-card h3 {
+            font-size: 14px;
+            color: #333;
+            margin: 10px 0;
+        }
+        .product-card p {
+            font-size: 12px;
+            color: #555;
+            margin-bottom: 8px;
+        }
+        .product-card .details-button {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background-color: black;
+            color: white;
+            font-size: 12px;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+ 
+
+    <!-- Main Content -->
+    <div id="main-content">
+        <!-- Header -->
+        <header class="header">
+            <img src="logo.png" alt="Logo">
+            <div class="nav-links">
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="https://bengeltigerwd.github.io/Bengal-Tiger-Website-Development-LTD/">Official Site</a>
+            </div>
+        </header>
+
+        <!-- Site Title & Search with Background -->
+        <section class="site-background">
+            <div class="site-title">
+                <h1>Advanced Web Store</h1>
+                <p>Find the best websites at the best prices</p>
+            </div>
+
+            <div class="search-container">
+                <input type="text" class="search-box" placeholder="Search for websites...">
+                <button class="search-button">Search</button>
+            </div>
+        </section>
+
+       
+
+        <!-- Product Cards -->
+        <section class="products">
+            <div class="product-card">
+                <img src="photo 1.jpg" alt="New desing Investment site">
+                <h3>New desing Investment site</h3>
+                <p>৳1550 (25%off) </p>
+                <a href="New Design Investment Site.html" class="details-button">Details</a>
+            </div>
+            <div class="product-card">
+                <img src="photo_2024-10-25_18-14-38.jpg" alt="shopx system investment site">
+                <h3>shopx system investment site</h3>
+                <p>৳8500 (13%off)</p>
+                <a href="shopx system investment site.html" class="details-button">Details</a>
+            </div>
+            <div class="product-card">
+                <img src="photo_2024-10-25_18-04-28.jpg" alt="New Primium Desing Investment Site ">
+                <h3>New Primium Desing Investment Site</h3>
+                <p>৳1950 (15%off)</p>
+                <a href="New Primium Desing Investment Site.html" class="details-button">Details</a>
+            </div>
+            <div class="product-card">
+                <img src="photo_2024-10-25_18-04-51.jpg" alt="Ultra Pimium Black Investment Website">
+                <h3>Ultra Pimium Black Investment Website</h3>
+                <p>৳1650 (26%off)</p>
+                <a href="Ultra Pimium Black Investment Website.html" class="details-button">Details</a>
+            </div>
+<div class="product-card">
+                <img src="photo_2024-10-25_18-10-03.jpg" alt="Look Smart Investment Website">
+                <h3>Look Smart Investment Website</h3>
+                <p>৳3150 (12%off)</p>
+                <a href="Look Smart Investment Website.html" class="details-button">Details</a>
+            </div>
+            <div class="product-card">
+                <img src="photo_2024-10-25_18-13-22.jpg" alt="Advanced Betting Investment Website ">
+                <h3>Advanced Betting Investment Website</h3>
+                <p>৳18000 (20%off)</p>
+                <a href="Advanced Betting Investment Website.html" class="details-button">Details</a>
+            </div>
+            <div class="product-card">
+                <img src="photo_2024-10-25_18-16-10.jpg" alt="All in One Investment Website">
+                <h3>All in One Investment Website</h3>
+                <p>৳2800 (33%off)</p>
+                <a href="All in One Investment Website.html" class="details-button">Details</a>
+            </div>
+            <div class="product-card">
+                <img src="photo_2024-10-25_18-17-38.jpg" alt="New Modify Investment System Website">
+                <h3>New Modify Investment System Website</h3>
+                <p>৳1450 (40%off)</p>
+                <a href="New Modify Investment System Website.html" class="details-button">Details</a>
+            </div>
+            <div class="product-card">
+                <img src="photo_2024-10-25_18-19-51.jpg" alt="Viewers Coice Investment Website">
+                <h3>Viewers Coice Investment Website</h3>
+                <p>৳2600 (35%off)</p>
+                <a href="Viewers Coice Investment Website.html" class="details-button">Details</a>
+            </div>
+            <div class="product-card">
+                <img src="photo_2024-10-25_18-18-40.jpg" alt="Primium x Investment System Website">
+                <h3>Primium Money Master Investment System Website</h3>
+                <p>৳4950 (12%off)</p>
+                <a href="Primium Money Master Investment System Website.html" class="details-button">Details</a>
+            </div>
+        </section>
+        <!-- Next Button -->
+<div style="text-align: center; margin: 20px 0;">
+    <a href="nextpage.html" class="next-button" style="
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 14px;
+    ">Next</a>
+</div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            ALL RIGHTS RESERVED 2024
+          <a href="https://bengeltigerwd.github.io/Bengal-Tiger-Website-Development-LTD/" target="_blank" rel="Bengal Tiger Web Development Limited">
+    Bengal Tiger Web Development Limited
+</a>
+
+        </footer>
+    </div>
+
+   
+    </script>
+</body>
+</html>
